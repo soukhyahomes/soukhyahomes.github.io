@@ -1,0 +1,36 @@
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="/assets/js/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/mousescroll.js"></script>
+<script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+crossorigin="anonymous"></script> -->
+
+<!-- Navbar Fix Script -->
+<script>
+    $(document).ready(function () {
+        // Calculating the distance from the top of the page to the initial position of the navbar, and store it in a variable
+        var navbarOffest = $(".navbar").offset().top;
+
+        $(window).on("scroll", function () {
+            var navbarHeight = $(".navbar").outerHeight();
+
+            if ($(window).scrollTop() >= navbarOffest) {
+                $(".navbar").addClass("navbar-fixed-top");
+                $("body").css("padding-top", navbarHeight + "px");
+            } else {
+                $(".navbar").removeClass("navbar-fixed-top");
+                $("body").css("padding-top", "0");
+            }
+        });
+    });
+</script>
