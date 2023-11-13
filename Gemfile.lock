@@ -73,6 +73,7 @@ GEM
 
 PLATFORMS
   universal-darwin-22
+  universal-darwin-23
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
