@@ -235,6 +235,22 @@
         transition: transform 0.2s, box-shadow 0.2s;
         background: #fff;
         box-shadow: 0 2px 12px rgba(0,150,136,0.07);
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* Standardize width for all cards */
+        width: 100%;
+        max-width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .facility-card h5, .feature-card h5, .facility-demand-card h6 {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .facility-card:hover, .facility-demand-card:hover, .feature-card:hover {
         transform: translateY(-8px) scale(1.03);
@@ -250,10 +266,21 @@
       }
       .section-title { font-size: 2.3rem; font-weight: 700; }
       .section-subtitle { font-size: 1.1rem; color: #6c757d; }
+      .row.g-4 {
+        --bs-gutter-x: 2.2rem;
+        --bs-gutter-y: 2.2rem;
+      }
+      @media (max-width: 991px) {
+        .facility-card, .facility-demand-card, .feature-card {
+          min-height: 340px;
+          max-width: 100%;
+        }
+      }
       @media (max-width: 767px) {
         .facilities-hero { min-height: 120px; }
         .section-title { font-size: 1.5rem; }
-        .facility-card, .facility-demand-card, .feature-card { padding: 1.2rem !important; }
+        .facility-card, .facility-demand-card, .feature-card { padding: 1.2rem !important; min-height: 0; }
+        .row.g-4 { --bs-gutter-x: 1rem; --bs-gutter-y: 1.5rem; }
       }
       .badge { border-radius: 30px; margin: 0 0.3rem 0.5rem 0.3rem; }
     </style>
