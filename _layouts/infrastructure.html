@@ -3,210 +3,161 @@
 {% include head.html %}
 <body>
     {% include nav.html %}
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs-fclty" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Infrastructure</h2>
-          <ol>
-            <li><a href="index.php">Home</a></li>
-            <li>Infrastructure</li>
-          </ol>
-        </div>
-
+    <!-- ======= Hero Section ======= -->
+    <section class="infra-hero d-flex align-items-center" style="background: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/fclty-bg.jpg') center/cover no-repeat; min-height: 350px; color: #fff;">
+      <div class="container text-center">
+        <h1 class="display-4 font-weight-bold mb-3" style="letter-spacing:1px;">World-Class Infrastructure</h1>
+        <p class="lead mb-4">Experience comfort, safety, and luxury at Soukhya Retirement Living</p>
+        <a href="#features" class="btn btn-lg btn-light font-weight-bold shadow">Explore Facilities</a>
       </div>
     </section>
-	
-	<!-- End Breadcrumbs -->
+    <!-- ======= End Hero Section ======= -->
 
- 
- <section id="about-us">
-    <div class="container-fluid">
-      <div class="row">
-        <div class=" col-md-6 col-sm-6 col-xs-12">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"></div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  
-   <!-- ============= About section End ============= -->
-   
     <!-- ======= Features Section ======= -->
-	
-    <section id="features" class="features">
-      <div class="container about-right">
-			<div class="row wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<h4>Soukhya Retirement Living</h4>
-				<h2><span>Infrastructure </span> In VILLAS & SUITS</h2>
-            </div>
-
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item  mt-2">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
-                  <h4>Fully furnished air conditioned bed room with twin bed.</h4>
-                 
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">
-                  <h4>Furnished drawing room. </h4>
-                  
-                </a>
-              </li>
-			  
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-3">
-                  <h4>Kitchenette with refrigerator, <br>microwave oven & kettle.</h4>
-                 
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-4">
-                  <h4>Toilet with hot water and grab bar. </h4>
-                 
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-5">
-                  <h4>Balcony with view of full greenery.  </h4>
-                 
-                </a>
-              </li>
-            </ul>
+    <section id="features" class="features py-5" style="background:#f8fafc;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2 class="section-title" style="font-weight:700;">Villas & Suites Infrastructure</h2>
+            <p class="section-subtitle text-muted">Designed for comfort, safety, and a vibrant community life</p>
           </div>
-          <div class="col-lg-7 ml-auto" data-aos="fade-left" data-aos-delay="100">
-            <div class="tab-content">
-              <div class="tab-pane active" id="tab-1">
-                <figure>
-                  <img src="/assets/img/portfolio/gal11.jpg" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <figure>
-                  <img src="/assets/img/portfolio/gal10.jpg" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <figure>
-                  <img src="/assets/img/portfolio/gal90.jpg" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <figure>
-                  <img src="/assets/img/portfolio/gal90.jpg" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-5">
-                <figure>
-                  <img src="/assets/img/portfolio/gal90.jpg" alt="" class="img-fluid">
-                </figure>
-              </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Feature Cards -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="infra-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-1.png" alt="Bedroom" class="infra-icon mb-3">
+              <h5 class="mb-2">Fully Furnished AC Bedroom</h5>
+              <p class="text-muted">Twin beds, premium furnishings, and climate control for restful nights.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="infra-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-2.png" alt="Drawing Room" class="infra-icon mb-3">
+              <h5 class="mb-2">Furnished Drawing Room</h5>
+              <p class="text-muted">Spacious, elegant living area for relaxation and socializing.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="infra-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-3.png" alt="Kitchenette" class="infra-icon mb-3">
+              <h5 class="mb-2">Kitchenette</h5>
+              <p class="text-muted">Equipped with refrigerator, microwave, and kettle for your convenience.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="infra-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-4.png" alt="Bathroom" class="infra-icon mb-3">
+              <h5 class="mb-2">Modern Bathroom</h5>
+              <p class="text-muted">Hot water, grab bars, and accessibility for safety and comfort.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="infra-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-5.png" alt="Balcony" class="infra-icon mb-3">
+              <h5 class="mb-2">Green View Balcony</h5>
+              <p class="text-muted">Private balcony with lush green views for peace and relaxation.</p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
-   
-   <section id="team" class="team section-bg">
-      <div class="container" style="background-color: #f2f2f2;">
 
-         <div class="row" style="padding:5px;">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  style="padding:5px; margin-top:5px;">
-		  
-            <div class="member" data-aos="fade-up">
-              
-              <div class="member-info">
-                <h4>KITCHEN </h4>
-                <span>A modern open kitchen is provided in the main building. Participatory cooking is appreciated. Inmates can select food, from the choices provided on a daily basis. </span>
-              </div>
-            </div>
+    <!-- ======= Facilities Section ======= -->
+    <section id="facilities" class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2 class="section-title" style="font-weight:700;">Campus Facilities</h2>
+            <p class="section-subtitle text-muted">Everything you need for a vibrant, healthy, and social lifestyle</p>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-             
-              <div class="member-info">
-                <h4>DINING AREA</h4>
-                <span>Restaurant like dining area is provided near the kitchen. Very good ambience for socializing along with food.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="200" >
-             
-              <div class="member-info">
-                <h4>FITNESS CENTER </h4>
-                <span>A well equipped fitness center is available with separate space for yoga and meditation </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              
-              <div class="member-info">
-                <h4>LIBRARY & READING ROOM</h4>
-                <span>A well maintained library caters to the reading habits of inmates. News papers & periodicals are also available for casual reading</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              
-              <div class="member-info">
-                <h4>GAME FACILITY</h4>
-                <span>A few indoor / outdoor games are made available for the effective use of time.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="500">
-              
-              <div class="member-info">
-                <h4>WALKWAY </h4>
-                <span>Walkway is provided throughout the compound. Walking for exercise is possible inside the fruit garden also. </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="600">
-              
-              <div class="member-info">
-                <h4>FRUIT GARDEN</h4>
-                <span>Residents can enjoy a variety of healthy fruits from the organic  fruit garden. It provides a serene, peaceful ambience for a morning walk and for spending evening time leisurely. </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding:5px; margin-top:5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="700">
-              
-              <div class="member-info">
-                <h4>FULL TIME CARETAKER</h4>
-                <span>Trained caretakers are residing in campus and are available round the clock.</span>
-              </div>
-            </div>
-          </div>
-
         </div>
-
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-1.png" alt="Kitchen" class="infra-icon mb-3">
+              <h5 class="mb-2">Modern Kitchen</h5>
+              <p class="text-muted">Participatory cooking, daily menu choices, and a welcoming atmosphere.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-2.png" alt="Dining" class="infra-icon mb-3">
+              <h5 class="mb-2">Restaurant-Style Dining</h5>
+              <p class="text-muted">Socialize and enjoy meals in a beautiful, restaurant-like setting.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-3.png" alt="Fitness" class="infra-icon mb-3">
+              <h5 class="mb-2">Fitness & Yoga Center</h5>
+              <p class="text-muted">Well-equipped gym, yoga, and meditation spaces for holistic wellness.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-4.png" alt="Library" class="infra-icon mb-3">
+              <h5 class="mb-2">Library & Reading Room</h5>
+              <p class="text-muted">A curated library with newspapers, periodicals, and a quiet reading space.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-5.png" alt="Games" class="infra-icon mb-3">
+              <h5 class="mb-2">Games & Recreation</h5>
+              <p class="text-muted">Indoor and outdoor games for fun, fitness, and socializing.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-6.png" alt="Walkway" class="infra-icon mb-3">
+              <h5 class="mb-2">Scenic Walkways</h5>
+              <p class="text-muted">Beautiful walkways and fruit gardens for exercise and relaxation.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-1.png" alt="Fruit Garden" class="infra-icon mb-3">
+              <h5 class="mb-2">Organic Fruit Garden</h5>
+              <p class="text-muted">Enjoy fresh fruits and a peaceful, natural environment every day.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm">
+              <img src="/assets/img/icon-2.png" alt="Caretaker" class="infra-icon mb-3">
+              <h5 class="mb-2">24/7 Caretaker</h5>
+              <p class="text-muted">Trained caretakers available round the clock for your safety and comfort.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-   
-   <!-- Additional facilities End -->
-   
-   {% include footer.html %}
-   {% include scripts.html %}
+
+    <style>
+      .infra-hero { min-height: 350px; }
+      .infra-card, .facility-card {
+        border: none;
+        border-radius: 18px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: #fff;
+      }
+      .infra-card:hover, .facility-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      }
+      .infra-icon {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+      .section-title { font-size: 2.2rem; font-weight: 700; }
+      .section-subtitle { font-size: 1.1rem; color: #6c757d; }
+      @media (max-width: 767px) {
+        .infra-hero { min-height: 220px; }
+        .section-title { font-size: 1.5rem; }
+      }
+    </style>
+    {% include footer.html %}
+    {% include scripts.html %}
 </body>
 </html>
