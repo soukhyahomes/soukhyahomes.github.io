@@ -143,17 +143,35 @@
         border-radius: 18px;
         transition: transform 0.2s, box-shadow 0.2s;
         background: #fff;
-        min-height: 270px;
-        padding: 2.2rem 1.5rem !important;
+        min-height: 320px;
+        max-height: 100%;
+        padding: 2.5rem 1.7rem !important;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
       .infra-card h5, .facility-card h5 {
-        font-size: 1.35rem;
+        font-size: 1.45rem;
+        margin-bottom: 1.1rem;
       }
       .infra-card p, .facility-card p {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
+        line-height: 1.7;
+        margin-bottom: 0;
       }
       .infra-card i, .facility-card i {
-        font-size: 2.5rem !important;
+        font-size: 2.7rem !important;
+        margin-bottom: 1.2rem;
+      }
+      .row.g-4 {
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
+      .row.g-4 > [class*='col-'] {
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
       .section-title { font-size: 2.2rem; font-weight: 700; }
       .section-subtitle { font-size: 1.1rem; color: #6c757d; }
