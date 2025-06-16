@@ -20,20 +20,19 @@
     <!-- ======= Event Section ======= -->
     <section class="events py-5">
       <div class="container">
-        <!-- <div class="row mb-4">
+        <div class="row mb-4">
           <div class="col text-center">
-            <h2 class="section-title">Our Recent Events</h2>
-            <p class="section-subtitle">A glimpse into our vibrant community life</p>
+            <h2 class="section-title" style="font-weight:700; font-size:2.3rem; color:#009688;">Moments of Soukhya</h2>
           </div>
-        </div> -->
+        </div>
         <div class="row" id="event-gallery">
           <!-- Event Gallery Grid -->
           {% assign event_images = "Soukhya_homes_gallery (2).jpg,Soukhya_homes_gallery (3).jpg,Soukhya_homes_gallery (4).jpg,Soukhya_homes_gallery (5).jpg,Soukhya_homes_gallery (6).jpg,Soukhya_homes_gallery (7).jpg,Soukhya_homes_gallery (8).jpg,Soukhya_homes_gallery (9).jpg,Soukhya_homes_gallery (10).jpg,Soukhya_homes_gallery (11).jpg,Soukhya_homes_gallery (12).jpg,Soukhya_homes_gallery (13).jpg,Soukhya_homes_gallery (14).jpg" | split: "," %}
           {% for img in event_images %}
-          <div class="col-md-4 mb-4">
-            <div class="card event-card shadow-sm h-100">
-              <a href="/assets/img/{{ img }}" data-lightbox="events" data-title="Event {{ forloop.index }}">
-                <img src="/assets/img/{{ img }}" class="card-img-top event-img" alt="Event {{ forloop.index }}">
+          <div class="col-md-4 mb-4 d-flex align-items-center justify-content-center">
+            <div class="card event-card shadow-sm h-100 d-flex align-items-center justify-content-center" style="background:#fff;">
+              <a href="/assets/img/{{ img }}" data-lightbox="events">
+                <img src="/assets/img/{{ img }}" class="event-img" alt="Event {{ forloop.index }}" style="display:block; margin-left:auto; margin-right:auto; max-width:100%; height:auto;">
               </a>
             </div>
             <div style="height: 3em;"></div>
