@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
         {% include head.html %}
+        <link href="/assets/css/lightbox.css" rel="stylesheet">
+        <script src="/assets/js/lightbox.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
@@ -29,45 +31,55 @@
           <!-- Feature Cards -->
           <div class="col-md-4 col-sm-6 mb-4">
             <div class="infra-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400&q=80" alt="Bedroom" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/bedroom.jpg" data-lightbox="infra" data-title="Fully Furnished AC Bedroom">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/bedroom.jpg" alt="Bedroom" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Fully Furnished AC Bedroom</h5>
               <p class="text-muted">Twin beds, premium furnishings, and climate control for restful nights.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
             <div class="infra-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=facearea&w=400&h=400&q=80" alt="Drawing Room" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/livingroom.jpg" data-lightbox="infra" data-title="Furnished Drawing Room">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/livingroom.jpg" alt="Drawing Room" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Furnished Drawing Room</h5>
               <p class="text-muted">Spacious, elegant living area for relaxation and socializing.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
             <div class="infra-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&h=400&q=80" alt="Kitchenette" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/kitchenette.jpg" data-lightbox="infra" data-title="Kitchenette">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/kitchenette.jpg" alt="Kitchenette" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Kitchenette</h5>
               <p class="text-muted">Equipped with refrigerator, microwave, and kettle for your convenience.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
             <div class="infra-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=400&h=400&q=80" alt="Bathroom" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/bathroom.jpg" data-lightbox="infra" data-title="Modern Bathroom">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/bathroom.jpg" alt="Bathroom" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Modern Bathroom</h5>
               <p class="text-muted">Hot water, grab bars, and accessibility for safety and comfort.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
             <div class="infra-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=400&h=400&q=80" alt="Balcony" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/balcony.jpg" data-lightbox="infra" data-title="Green View Balcony">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/balcony.jpg" alt="Balcony" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Green View Balcony</h5>
               <p class="text-muted">Private balcony with lush green views for peace and relaxation.</p>
             </div>
@@ -88,72 +100,88 @@
         <div class="row g-4 justify-content-center">
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=facearea&w=400&h=400&q=80" alt="Kitchen" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/kitchen.jpg" data-lightbox="infra" data-title="Modern Kitchen">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/kitchen.jpg" alt="Kitchen" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Modern Kitchen</h5>
               <p class="text-muted">Participatory cooking, daily menu choices, and a welcoming atmosphere.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=facearea&w=400&h=400&q=80" alt="Dining" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/dining.jpg" data-lightbox="infra" data-title="Restaurant-Style Dining">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/dining.jpg" alt="Dining" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Restaurant-Style Dining</h5>
               <p class="text-muted">Socialize and enjoy meals in a beautiful, restaurant-like setting.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400&q=80" alt="Fitness" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/fitness.jpg" data-lightbox="infra" data-title="Fitness & Yoga Center">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/fitness.jpg" alt="Fitness" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Fitness & Yoga Center</h5>
               <p class="text-muted">Well-equipped gym, yoga, and meditation spaces for holistic wellness.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400&q=80" alt="Library" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/library.jpg" data-lightbox="infra" data-title="Library & Reading Room">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/library.jpg" alt="Library" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Library & Reading Room</h5>
               <p class="text-muted">A curated library with newspapers, periodicals, and a quiet reading space.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&h=400&q=80" alt="Games" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/games.jpg" data-lightbox="infra" data-title="Games & Recreation">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/games.jpg" alt="Games" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Games & Recreation</h5>
               <p class="text-muted">Indoor and outdoor games for fun, fitness, and socializing.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=400&h=400&q=80" alt="Walkway" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/walkway.jpg" data-lightbox="infra" data-title="Scenic Walkways">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/walkway.jpg" alt="Walkway" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Scenic Walkways</h5>
               <p class="text-muted">Beautiful walkways and fruit gardens for exercise and relaxation.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=400&h=400&q=80" alt="Fruit Garden" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/fruitgarden.jpg" data-lightbox="infra" data-title="Organic Fruit Garden">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/fruitgarden.jpg" alt="Fruit Garden" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">Organic Fruit Garden</h5>
               <p class="text-muted">Enjoy fresh fruits and a peaceful, natural environment every day.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="facility-card card h-100 text-center p-4 shadow-sm">
-              <div class="infra-img-circle mb-3">
-                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=facearea&w=400&h=400&q=80" alt="Caretaker" class="infra-img-thumb">
-              </div>
+              <a href="/assets/img/infra/caretaker.jpg" data-lightbox="infra" data-title="24/7 Caretaker">
+                <div class="infra-img-circle mb-3">
+                  <img src="/assets/img/infra/caretaker.jpg" alt="Caretaker" class="infra-img-thumb">
+                </div>
+              </a>
               <h5 class="mb-2">24/7 Caretaker</h5>
               <p class="text-muted">Trained caretakers available round the clock for your safety and comfort.</p>
             </div>
