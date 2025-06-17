@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    {% include nav.html %}
+    <!-- ======= Reviews Hero Section ======= -->
+    <section class="reviews-hero d-flex align-items-center" style="background: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/fclty-bg.jpg') center/cover no-repeat; min-height: 220px; color: #fff;">
+      <div class="container text-center">
+        <h1 class="display-4 font-weight-bold mb-2">Customer Reviews & Feedback</h1>
+        <p class="lead mb-0">See what our residents and their families say about Soukhya Homes</p>
+      </div>
+    </section>
+    <!-- ======= End Reviews Hero Section ======= -->
+
+    <!-- ======= Reviews Section ======= -->
+    <section class="py-5" style="background:#f8fafc;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2 class="section-title" style="font-weight:700;">Our Happy Residents</h2>
+            <p class="section-subtitle text-muted">Real stories, real smiles, real Soukhya</p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Example Review Card -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="review-card card h-100 p-4 shadow-sm border-accent text-center">
+              <img src="/assets/img/team/user1.jpg" alt="Resident Photo" class="rounded-circle mb-3" style="width:80px;height:80px;object-fit:cover;border:3px solid #00bfae;">
+              <h5 class="mb-1">Mrs. Lakshmi Nair</h5>
+              <p class="text-muted mb-2" style="font-size:1.05rem;">"Soukhya Homes is truly a home away from home. The staff are caring and the environment is peaceful. My family is happy and so am I!"</p>
+              <div class="text-warning mb-2">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+              </div>
+              <span class="text-muted" style="font-size:0.95rem;">Resident since 2022</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="review-card card h-100 p-4 shadow-sm border-accent text-center">
+              <img src="/assets/img/team/user2.jpg" alt="Family Member Photo" class="rounded-circle mb-3" style="width:80px;height:80px;object-fit:cover;border:3px solid #00bfae;">
+              <h5 class="mb-1">Rajesh Kumar</h5>
+              <p class="text-muted mb-2" style="font-size:1.05rem;">"My parents are well taken care of at Soukhya. The facilities are excellent and the community is vibrant. Highly recommended!"</p>
+              <div class="text-warning mb-2">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              <span class="text-muted" style="font-size:0.95rem;">Son of Resident</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="review-card card h-100 p-4 shadow-sm border-accent text-center">
+              <img src="/assets/img/team/user3.jpg" alt="Resident Photo" class="rounded-circle mb-3" style="width:80px;height:80px;object-fit:cover;border:3px solid #00bfae;">
+              <h5 class="mb-1">Smt. Saraswathy Menon</h5>
+              <p class="text-muted mb-2" style="font-size:1.05rem;">"The activities and events keep me engaged and happy. I have made many friends here. Thank you, Soukhya!"</p>
+              <div class="text-warning mb-2">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              <span class="text-muted" style="font-size:0.95rem;">Resident since 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h4 class="mb-3" style="font-weight:600;">Want to share your experience?</h4>
+            <a href="mailto:soukhyahomes@gmail.com" class="btn btn-success px-4 py-2" style="font-weight:600;">Send Us Your Review</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .reviews-hero { min-height: 220px; }
+      .review-card {
+        border: none;
+        border-radius: 18px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0,150,136,0.07);
+      }
+      .review-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(0,150,136,0.13);
+        border-color: #00bfae;
+      }
+      .border-accent {
+        border: 2px solid #e0f2f1 !important;
+      }
+      .section-title { font-size: 2.2rem; font-weight: 700; }
+      .section-subtitle { font-size: 1.1rem; color: #6c757d; }
+      @media (max-width: 767px) {
+        .reviews-hero { min-height: 120px; }
+        .section-title { font-size: 1.5rem; }
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% include footer.html %}
+    {% include scripts.html %}
+</body>
+</html>
