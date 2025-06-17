@@ -18,7 +18,7 @@
         <div class="row mb-5">
           <div class="col text-center">
             <h2 class="section-title" style="font-weight:700;">Our Happy Residents</h2>
-            <p class="section-subtitle text-muted">Real stories, real smiles, real Soukhya</p>
+            <h3 class="section-subtitle text-muted">Real stories, real smiles, real Soukhya</h3>
           </div>
         </div>
         <div class="row g-4 justify-content-center">
@@ -96,20 +96,21 @@ Soukhya Homes has become a true home for my mother, and I'm thankful for the pea
         transition: transform 0.2s, box-shadow 0.2s;
         background: #fff;
         box-shadow: 0 2px 12px rgba(0,150,136,0.07);
+        padding: 2rem 1.5rem !important;
       }
-      .review-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 8px 32px rgba(0,150,136,0.13);
-        border-color: #00bfae;
+      .review-card p {
+        text-align: justify;
+      }
+      .review-card h5.mb-1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
       .border-accent {
         border: 2px solid #e0f2f1 !important;
       }
       .section-title { font-size: 2.2rem; font-weight: 700; }
       .section-subtitle { font-size: 1.1rem; color: #6c757d; }
-      .review-card p {
-        text-align: justify;
-      }
       @media (max-width: 767px) {
         .reviews-hero { min-height: 120px; }
         .section-title { font-size: 1.5rem; }
