@@ -29,44 +29,44 @@
           </div>
         </div>
         <div class="row g-4 justify-content-center core-facilities" style="font-size: 1.4rem;">
-          <!-- Facility Cards -->
+          <!-- Facility Cards (remove min-height for standardizing) -->
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-bed fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Luxury Studio Apartments / Villas</h5>
               <p class="text-muted">Fully furnished, air-conditioned bedroom with twin bed, drawing room, kitchenette, and balcony with a view of luscious greenery.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-seedling fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Landscaped Yard & Fruit Garden</h5>
               <p class="text-muted">Fully landscaped yard with walkway, organic fruit garden, and a fish pond for a serene environment.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-utensils fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Dining & Food</h5>
               <p class="text-muted">Restaurant-like dining area, food of your choice, and a modern kitchen for participatory cooking.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-dumbbell fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Fitness & Wellness</h5>
               <p class="text-muted">Well-equipped fitness centre, yoga & meditation zone, and an Ayurveda wellness centre with trained practitioners.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-book-open fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Library & Entertainment</h5>
               <p class="text-muted">Library, reading room, indoor/outdoor games, mini theatre, and free WiFi in rooms.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent" style="min-height: 370px;">
+            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
               <i class="fa-solid fa-user-nurse fa-3x mb-3 facility-icon"></i>
               <h5 class="mb-2">Medical & Assisted Living</h5>
               <p class="text-muted">Doctor & clinic, daily visits, MoU with hospitals, assisted living support, and full-time caretaker.</p>
@@ -302,6 +302,9 @@
         .feature-card { min-height: unset; }
       }
       .badge { border-radius: 30px; margin: 0 0.3rem 0.5rem 0.3rem; }
+      .special-features > [class*='col-'] {
+        margin-bottom: 2.2rem;
+      }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% include footer.html %}
