@@ -186,6 +186,28 @@ So in all ways we are satisfied here. Since last 2 years we were searching sever
         background: #fff;
         box-shadow: 0 2px 12px rgba(0,150,136,0.07);
         padding: 2rem 1.5rem !important;
+        max-height: 320px;
+        overflow: hidden;
+        position: relative;
+      }
+      .review-card.expanded {
+        max-height: none;
+        overflow: visible;
+      }
+      .review-card .more-btn {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        background: linear-gradient(0deg, #fff 70%, rgba(255,255,255,0));
+        text-align: center;
+        padding: 2.5rem 0 0.5rem 0;
+        cursor: pointer;
+        font-weight: 600;
+        color: #009688;
+        border: none;
+        width: 100%;
+        outline: none;
+        border-radius: 0 0 18px 18px;
+        z-index: 2;
       }
       .row.g-4.justify-content-center > [class*='col-'] {
         margin-bottom: 2.2rem;
@@ -217,3 +239,20 @@ So in all ways we are satisfied here. Since last 2 years we were searching sever
     {% include scripts.html %}
 </body>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.review-card').forEach(function(card) {
+      var p = card.querySelector('p');
+      if (p && p.scrollHeight > 300) {
+        var btn = document.createElement('button');
+        btn.className = 'more-btn';
+        btn.innerText = 'Read More';
+        btn.onclick = function() {
+          card.classList.add('expanded');
+          btn.style.display = 'none';
+        };
+        card.appendChild(btn);
+      }
+    });
+  });
+</script>
