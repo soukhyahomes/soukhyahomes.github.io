@@ -2775,4 +2775,10 @@ border-bottom: 1px solid #75b482;
 		Media Query End
 ==================================*/
 
+.review-meta {
+  display: block !important;
+  margin-top: 0.25rem;
+  color: #6c757d;
+}
+
 
