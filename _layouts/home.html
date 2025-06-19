@@ -3,15 +3,8 @@
 {% include head.html %}
 <body>
     {% include nav.html %}
-    <!-- Modern Hero Section -->
-    <section class="modern-hero d-flex align-items-center justify-content-center text-center" style="background: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/slider/1banner1.jpg') center/cover no-repeat; min-height: 60vh; color: #fff;">
-      <div class="container py-5">
-        <h1 class="display-3 font-weight-bold mb-3">Luxury Community Living for Senior Citizens</h1>
-        <p class="lead mb-4">We take pride in taking care of people</p>
-        <a href="about.html" class="btn btn-lg btn-primary mr-2">About Us</a>
-        <a href="#contact" class="btn btn-lg btn-success ml-2">Enquire Now</a>
-      </div>
-    </section>
+    <!-- Modern Hero Section: Banner Only, No Overlay, No Content Above -->
+    <section class="modern-hero-banner" style="background: url('/assets/img/slider/1banner1.jpg') center/cover no-repeat; min-height: 60vh; width:100%;"></section>
 
     <!-- Features Section -->
     <section class="features-section py-5" style="background:#f8fafc;">
@@ -23,53 +16,47 @@
           </div>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-1.png" alt="Atmosphere" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Amazing Atmosphere</h5>
-              <p class="text-muted">Panoramic surroundings, calm ambience, birdsong, fruit trees, and a big pond with fancy fish.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-1.png" alt="Atmosphere" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Amazing Atmosphere</h6>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-2.png" alt="Medical Care" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Latest Medical Care</h5>
-              <p class="text-muted">Daily doctor visits, tie-ups with multi-speciality hospitals, and quick access to care.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-2.png" alt="Medical Care" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Latest Medical Care</h6>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-3.png" alt="Vehicle & Driver" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Vehicle & Driver</h5>
-              <p class="text-muted">24x7 car and driver for emergencies, airport pickup/drop, and personal travel.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-3.png" alt="Vehicle & Driver" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Vehicle & Driver</h6>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-4.png" alt="Yoga" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Yoga for Relaxation</h5>
-              <p class="text-muted">Dedicated yoga space and occasional trainer visits for holistic well-being.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-4.png" alt="Yoga" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Yoga for Relaxation</h6>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-5.png" alt="Assisted Living" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Assisted Living Support</h5>
-              <p class="text-muted">Full-time assistance for residents who need extra support.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-5.png" alt="Assisted Living" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Assisted Living</h6>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-0 text-center">
-              <img src="/assets/img/icon-6.png" alt="Caretaker" class="mb-3" style="height:60px;">
-              <h5 class="mb-2">Fulltime Caretaker</h5>
-              <p class="text-muted">On-site caretaker ensures help is always available.</p>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <div class="feature-card card h-100 p-3 shadow-sm border-0 text-center">
+              <img src="/assets/img/icon-6.png" alt="Caretaker" class="mb-2" style="height:40px;">
+              <h6 class="mb-1">Fulltime Caretaker</h6>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section: Two Columns, Image Left, Text Right -->
     <section id="about-us" class="py-5">
       <div class="container">
         <div class="row align-items-center">
@@ -97,7 +84,7 @@
       <div class="container">
         <h2 class="mb-3 font-weight-bold">Ready to experience Soukhya Homes?</h2>
         <p class="mb-4">Contact us today to schedule a visit or learn more about our vibrant community.</p>
-        <a href="#contact" class="btn btn-lg btn-light text-primary font-weight-bold">Contact Us</a>
+        <a href="contact.html" class="btn btn-lg btn-light text-primary font-weight-bold">Contact Us</a>
       </div>
     </section>
 
@@ -106,39 +93,31 @@
 </body>
 </html>
 <style>
-  .modern-hero {
+  .modern-hero-banner {
     min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    position: relative;
-  }
-  .modern-hero .container {
-    z-index: 2;
-    position: relative;
-  }
-  .modern-hero:before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,150,136,0.5);
-    z-index: 1;
+    margin-bottom: 0;
   }
   .feature-card {
-    border-radius: 18px;
+    border-radius: 16px;
     transition: transform 0.2s, box-shadow 0.2s;
     background: #fff;
     box-shadow: 0 2px 12px rgba(0,150,136,0.07);
-    padding: 2rem 1.5rem !important;
-    min-height: 320px;
+    padding: 1.2rem 0.5rem !important;
+    min-height: 120px;
     overflow: hidden;
     position: relative;
+    margin: 0 0.5rem;
   }
   .feature-card:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-6px) scale(1.04);
     box-shadow: 0 8px 32px rgba(0,150,136,0.15);
+  }
+  .features-section .row.g-4 {
+    row-gap: 1.5rem;
+    column-gap: 0.5rem;
   }
   .section-title {
     font-size: 2.2rem;
@@ -148,6 +127,18 @@
   .section-subtitle {
     font-size: 1.1rem;
     color: #6c757d;
+  }
+  #about-us .container {
+    max-width: 1100px;
+  }
+  #about-us .row {
+    align-items: center;
+  }
+  #about-us img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,150,136,0.10);
   }
   .cta-section {
     background: linear-gradient(90deg, #00bfae 60%, #f8fafc 100%);
