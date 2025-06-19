@@ -296,14 +296,17 @@ At Soukhya Homes, we don’t just live—we share, we cherish, and we thrive. It
         // Hide original stars/meta until expanded
         stars.style.display = 'none';
         meta.style.display = 'none';
+        container.style.display = 'none'; // Hide floating stars/meta initially
         btn.onclick = function() {
           card.classList.add('expanded');
           btn.style.display = 'none';
           // Show original stars/meta in expanded view
           if (stars) stars.style.display = '';
           if (meta) meta.style.display = '';
-          // Hide the floating stars/meta
-          if (container) container.style.display = 'none';
+          // Show the floating stars/meta
+          if (container) container.style.display = 'block';
+          // Hide the floating stars/meta (should be hidden in expanded)
+          container.style.display = 'none';
           // Show undo button
           undoBtn.style.display = 'block';
         };
@@ -316,7 +319,7 @@ At Soukhya Homes, we don’t just live—we share, we cherish, and we thrive. It
           btn.style.display = 'block';
           if (stars) stars.style.display = 'none';
           if (meta) meta.style.display = 'none';
-          if (container) container.style.display = 'block';
+          if (container) container.style.display = 'none'; // Keep floating stars/meta hidden
           undoBtn.style.display = 'none';
           card.scrollIntoView({behavior: 'smooth', block: 'center'});
         };
