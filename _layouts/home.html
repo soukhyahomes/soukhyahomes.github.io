@@ -4,7 +4,13 @@
 <body>
     {% include nav.html %}
     <!-- Modern Hero Section: Banner Only, No Overlay, No Content Above -->
-    <section class="modern-hero-banner" style="background: url('/assets/img/slider/1banner1.jpg') center/cover no-repeat; min-height: 60vh; width:100%;"></section>
+    <section class="modern-hero-banner position-relative" style="background: url('/assets/img/slider/1banner1.jpg') center/cover no-repeat; min-height: 60vh; width:100%;">
+      <!-- Overlapping Buttons Bottom Left -->
+      <div class="banner-buttons-box d-none d-md-flex flex-column align-items-start">
+        <a href="#contact" class="btn btn-lg btn-outline-primary mb-2">Enquire Now</a>
+        <a href="/assets/brochure.pdf" class="btn btn-lg btn-outline-success" target="_blank"> Brochure</a>
+      </div>
+    </section>
 
     <!-- Welcome Section (below banner, before features) -->
     <section class="welcome-section py-5 position-relative" style="overflow:hidden;">
@@ -20,7 +26,7 @@
         <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <h4>Welcome to Soukhya Homes</h4>
           <h1><span>We make a Difference </span> in your lives</h1>
-          <!--<p style="font-style:italic; color:green;">'Forty is the old age of youth and fifty is the youth of old age.' - <b>Hosea Ballou</b></p>-->
+          <p style="font-style:italic; color:green;">'Forty is the old age of youth and fifty is the youth of old age.' - <b>Hosea Ballou</b></p>-
           <p>COMMUNITY LIVING FOR SENIOR CITIZEN Retirement is the beginning of a new phase in life aiming at
             serene, calm and peaceful atmosphere. In soukhya villas it is envisaged to develop community living
             for senior citizens with all luxury and safety measures. </p>
@@ -201,5 +207,45 @@
   @keyframes popcelebrate {
     0% { transform: scale(1) translateY(0); opacity: 0.7; }
     100% { transform: scale(1.15) translateY(-12px); opacity: 1; }
+  }
+  .banner-buttons-box {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 24px 20px 20px 20px;
+    z-index: 10;
+    min-width: 220px;
+    gap: 10px;
+  }
+  .banner-buttons-box .btn {
+    width: 100%;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,150,136,0.08);
+    border-width: 2px;
+    border-radius: 10px;
+    background: #fff;
+    color: #00bfae;
+    transition: all 0.18s;
+  }
+  .banner-buttons-box .btn-outline-primary {
+    border-color: #00bfae;
+  }
+  .banner-buttons-box .btn-outline-primary:hover {
+    background: #00bfae;
+    color: #fff;
+  }
+  .banner-buttons-box .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+  }
+  .banner-buttons-box .btn-outline-success:hover {
+    background: #28a745;
+    color: #fff;
+  }
+  @media (max-width: 767px) {
+    .banner-buttons-box { display: none !important; }
   }
 </style>
