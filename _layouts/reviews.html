@@ -275,6 +275,13 @@ So in all ways we are satisfied here. Since last 2 years we were searching sever
         container.className = 'stars-and-meta';
         if (stars) container.appendChild(stars.cloneNode(true));
         if (meta) container.appendChild(meta.cloneNode(true));
+        // Add consolidated/expanded meta info
+        var expandedMeta = document.createElement('div');
+        expandedMeta.className = 'expanded-meta text-muted';
+        expandedMeta.style.fontSize = '0.95rem';
+        expandedMeta.style.marginTop = '0.25rem';
+        expandedMeta.innerText = meta ? (meta.innerText + ' (Consolidated & Expanded)') : '';
+        container.appendChild(expandedMeta);
         card.appendChild(container);
         // Hide original stars/meta until expanded
         stars.style.display = 'none';
