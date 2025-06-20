@@ -70,458 +70,448 @@
     </section>
     <!-- ============= About section End ============= -->
 
-    <!-- ======= Promoters Section ======= -->
-    <section id="promoters" style="background: linear-gradient(135deg, #e0f7fa 0%, #f8fafc 100%); padding: 40px 0;">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-4">
-            <div class="section-title" data-aos="fade-up">
-              <h2 style="font-weight:700; letter-spacing:1px;"><span style="color:#009688;">PROMOTERS</span> OF THE PROJECT</h2>
+    <!-- ======= Promoters Section (Tailwind/Alpine) ======= -->
+        <section id="promoters" class="bg-gradient-to-br from-cyan-100 to-slate-50 py-12">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl md:text-4xl font-bold tracking-wide text-teal-700">PROMOTERS OF THE PROJECT</h2>
             </div>
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-stretch">
-          <!-- Promoters cards (static fallback, you can add more as needed) -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/baby_c_m.jpg" data-lightbox="promoters" data-title="BABY C M">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/baby_c_m.jpg" alt="BABY C M" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <!-- Promoter Card Start -->
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/baby_c_m.jpg" alt="BABY C M" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">BABY C M</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Partner, City Hardware, Kottappady</p>
+                  <!-- Popup Modal -->
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/baby_c_m.jpg" alt="BABY C M" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">BABY C M</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Partner, City Hardware, Kottappady</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">BABY C M</h5>
-                <p class="card-text small">Managing Partner, City Hardware, Kottappady</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/binu_erambathu.jpg" data-lightbox="promoters" data-title="BINU ERAMBATHU">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/binu_erambathu.jpg" alt="BINU ERAMBATHU" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <!-- Promoter Card End -->
+
+              <!-- Repeat for each promoter, changing image, name, and description -->
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/binu_erambathu.jpg" alt="BINU ERAMBATHU" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">BINU ERAMBATHU</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Director, Erambathu Group.</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/binu_erambathu.jpg" alt="BINU ERAMBATHU" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">BINU ERAMBATHU</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Director, Erambathu Group.</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">BINU ERAMBATHU</h5>
-                <p class="card-text small">Managing Director, Erambathu Group.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/binson_mathew.jpg" data-lightbox="promoters" data-title="BINSON MATHEW">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/binson_mathew.jpg" alt="BINSON MATHEW" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/binson_mathew.jpg" alt="BINSON MATHEW" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">BINSON MATHEW</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Director, Academy for catering technology, Ernakulam</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/binson_mathew.jpg" alt="BINSON MATHEW" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">BINSON MATHEW</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Director, Academy for catering technology, Ernakulam</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">BINSON MATHEW</h5>
-                <p class="card-text small">Managing Director, Academy for catering technology, Ernakulam</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/sabu_paul.jpg" data-lightbox="promoters" data-title="DR. SABU PAUL MD">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/sabu_paul.jpg" alt="DR. SABU PAUL MD" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/sabu_paul.jpg" alt="DR. SABU PAUL MD" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. SABU PAUL MD</h5>
+                  <p class="text-gray-600 text-sm text-center">Consultant Physician</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/sabu_paul.jpg" alt="DR. SABU PAUL MD" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. SABU PAUL MD</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Consultant Physician</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR. SABU PAUL MD</h5>
-                <p class="card-text small">Consultant Physician</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/vijith_v_nagelil.jpg" data-lightbox="promoters" data-title="DR. VIJITH V NAGELIL">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/vijith_v_nagelil.jpg" alt="DR. VIJITH V NAGELIL" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
-                </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR. VIJITH V NAGELIL</h5>
-                <p class="card-text small">Executive Director, Nangelil Ayurveda Medical College; Managing Director, Nangelil Hospital &
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/vijith_v_nagelil.jpg" alt="DR. VIJITH V NAGELIL" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. VIJITH V NAGELIL</h5>
+                  <p class="text-gray-600 text-sm text-center">Executive Director, Nangelil Ayurveda Medical College; Managing Director, Nangelil Hospital &
                     Nangelil Pharmacy, Kothamangalam.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/dr_joy_t_i.jpg" data-lightbox="promoters" data-title="DR.JOY T I">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/dr_joy_t_i.jpg" alt="DR.JOY T I" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/vijith_v_nagelil.jpg" alt="DR. VIJITH V NAGELIL" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. VIJITH V NAGELIL</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Executive Director, Nangelil Ayurveda Medical College; Managing Director, Nangelil Hospital &
+                    Nangelil Pharmacy, Kothamangalam.</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR.JOY T I</h5>
-                <p class="card-text small">Consultant Physician</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/george_c_o.jpg" data-lightbox="promoters" data-title="GEORGE C O">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/george_c_o.jpg" alt="GEORGE C O" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/dr_joy_t_i.jpg" alt="DR.JOY T I" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR.JOY T I</h5>
+                  <p class="text-gray-600 text-sm text-center">Consultant Physician</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/dr_joy_t_i.jpg" alt="DR.JOY T I" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR.JOY T I</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Consultant Physician</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">GEORGE C O</h5>
-                <p class="card-text small">Prof. & former Head, dept of chemistry, MA college, Kothamagalam </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/george_o_v.jpg" data-lightbox="promoters" data-title="GEORGE O V">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/george_o_v.jpg" alt="GEORGE O V" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/george_c_o.jpg" alt="GEORGE C O" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">GEORGE C O</h5>
+                  <p class="text-gray-600 text-sm text-center">Prof. & former Head, dept of chemistry, MA college, Kothamagalam </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/george_c_o.jpg" alt="GEORGE C O" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">GEORGE C O</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Prof. & former Head, dept of chemistry, MA college, Kothamagalam </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">GEORGE O V</h5>
-                <p class="card-text small">Consulting interior designer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/joby_george.jpg" data-lightbox="promoters" data-title="JOBY GEORGE">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/joby_george.jpg" alt="JOBY GEORGE" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/george_o_v.jpg" alt="GEORGE O V" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">GEORGE O V</h5>
+                  <p class="text-gray-600 text-sm text-center">Consulting interior designer</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/george_o_v.jpg" alt="GEORGE O V" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">GEORGE O V</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Consulting interior designer</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">JOBY GEORGE</h5>
-                <p class="card-text small"> Employed in UK</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/kemthose_p_paul.jpg" data-lightbox="promoters" data-title="DR. KEMTHOSE P PAUL">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/kemthose_p_paul.jpg" alt="DR. KEMTHOSE P PAUL" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/joby_george.jpg" alt="JOBY GEORGE" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">JOBY GEORGE</h5>
+                  <p class="text-gray-600 text-sm text-center"> Employed in UK</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/joby_george.jpg" alt="JOBY GEORGE" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">JOBY GEORGE</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2"> Employed in UK</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR. KEMTHOSE P PAUL</h5>
-                <p class="card-text small">Director of MBA,Mar Baselios Institute of Technology and Science(MBITS)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/manoj_m_joseph.jpg" data-lightbox="promoters" data-title="MANOJ M JOSEPH">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/manoj_m_joseph.jpg" alt="MANOJ M JOSEPH" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/kemthose_p_paul.jpg" alt="DR. KEMTHOSE P PAUL" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. KEMTHOSE P PAUL</h5>
+                  <p class="text-gray-600 text-sm text-center">Director of MBA,Mar Baselios Institute of Technology and Science(MBITS)</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/kemthose_p_paul.jpg" alt="DR. KEMTHOSE P PAUL" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. KEMTHOSE P PAUL</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Director of MBA,Mar Baselios Institute of Technology and Science(MBITS)</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">MANOJ M JOSEPH</h5>
-                <p class="card-text small">Managing Partner, Malanad Passion Fruit, Kothamangalam </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/mathews_m_paul.jpg" data-lightbox="promoters" data-title="DR. MATHEWS M PAUL">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/mathews_m_paul.jpg" alt="DR. MATHEWS M PAUL" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/manoj_m_joseph.jpg" alt="MANOJ M JOSEPH" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">MANOJ M JOSEPH</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Partner, Malanad Passion Fruit, Kothamangalam </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/manoj_m_joseph.jpg" alt="MANOJ M JOSEPH" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">MANOJ M JOSEPH</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Partner, Malanad Passion Fruit, Kothamangalam </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR. MATHEWS M PAUL</h5>
-                <p class="card-text small">Prof. & former Head, Civil Engineering Department, MA College of Engineering, Kothamangalam.
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/mathews_m_paul.jpg" alt="DR. MATHEWS M PAUL" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. MATHEWS M PAUL</h5>
+                  <p class="text-gray-600 text-sm text-center">Prof. & former Head, Civil Engineering Department, MA College of Engineering, Kothamangalam.
                 </p>
-            </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/manju_peter.jpg" data-lightbox="promoters" data-title="MANJU PETER">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/manju_peter.jpg" alt="MANJU PETER" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+                <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/mathews_m_paul.jpg" alt="DR. MATHEWS M PAUL" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. MATHEWS M PAUL</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Prof. & former Head, Civil Engineering Department, MA College of Engineering, Kothamangalam.
+                </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">MANJU PETER</h5>
-                <p class="card-text small">Managing Director,Nursing Home in UK</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/paulose_k_c.jpg" data-lightbox="promoters" data-title="PAULOSE K C">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/paulose_k_c.jpg" alt="PAULOSE K C" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/manju_peter.jpg" alt="MANJU PETER" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">MANJU PETER</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Director,Nursing Home in UK</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/manju_peter.jpg" alt="MANJU PETER" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">MANJU PETER</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Director,Nursing Home in UK</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">PAULOSE K C</h5>
-                <p class="card-text small">Rtd. Principal, Mar Elias HSS, Kottappady </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/paulose_karipra.jpg" data-lightbox="promoters" data-title="PAULOSE KARIPRA">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/paulose_karipra.jpg" alt="PAULOSE KARIPRA" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/paulose_k_c.jpg" alt="PAULOSE K C" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE K C</h5>
+                  <p class="text-gray-600 text-sm text-center">Rtd. Principal, Mar Elias HSS, Kottappady </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/paulose_k_c.jpg" alt="PAULOSE K C" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE K C</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Rtd. Principal, Mar Elias HSS, Kottappady </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">PAULOSE KARIPRA</h5>
-                <p class="card-text small">Govt. Construction contractor </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/paulose_m_m.jpg" data-lightbox="promoters" data-title="DR. PAULOSE M M">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/paulose_m_m.jpg" alt="DR. PAULOSE M M" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/paulose_karipra.jpg" alt="PAULOSE KARIPRA" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE KARIPRA</h5>
+                  <p class="text-gray-600 text-sm text-center">Govt. Construction contractor </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/paulose_karipra.jpg" alt="PAULOSE KARIPRA" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE KARIPRA</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Govt. Construction contractor </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">DR. PAULOSE M M</h5>
-                <p class="card-text small">Retd. Principal,MBITS College of Engineering</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/paulose_o_varghese.jpg" data-lightbox="promoters" data-title="PAULOSE O VARGHESE">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/paulose_o_varghese.jpg" alt="PAULOSE O VARGHESE" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/paulose_m_m.jpg" alt="DR. PAULOSE M M" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. PAULOSE M M</h5>
+                  <p class="text-gray-600 text-sm text-center">Retd. Principal,MBITS College of Engineering</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/paulose_m_m.jpg" alt="DR. PAULOSE M M" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">DR. PAULOSE M M</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Retd. Principal,MBITS College of Engineering</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">PAULOSE O VARGHESE</h5>
-                <p class="card-text small">Managing Director, Fourtech Systems, Mumbai </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/peter_abraham.jpg" data-lightbox="promoters" data-title="PETER ABRAHAM">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/peter_abraham.jpg" alt="PETER ABRAHAM" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/paulose_o_varghese.jpg" alt="PAULOSE O VARGHESE" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE O VARGHESE</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Director, Fourtech Systems, Mumbai </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/paulose_o_varghese.jpg" alt="PAULOSE O VARGHESE" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">PAULOSE O VARGHESE</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Director, Fourtech Systems, Mumbai </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">PETER ABRAHAM</h5>
-                <p class="card-text small">Sr. Vice President(Rtd), Reliance Industries, Gujarat </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/p_ravindran.jpg" data-lightbox="promoters" data-title="P RAVINDRAN">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/p_ravindran.jpg" alt="P RAVINDRAN" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/peter_abraham.jpg" alt="PETER ABRAHAM" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">PETER ABRAHAM</h5>
+                  <p class="text-gray-600 text-sm text-center">Sr. Vice President(Rtd), Reliance Industries, Gujarat </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/peter_abraham.jpg" alt="PETER ABRAHAM" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">PETER ABRAHAM</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Sr. Vice President(Rtd), Reliance Industries, Gujarat </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">P RAVINDRAN</h5>
-                <p class="card-text small">Retd.Electrical Engineer </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/roy_n_mathews.jpg" data-lightbox="promoters" data-title="ROY N MATHEWS (DR)">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/roy_n_mathews.jpg" alt="ROY N MATHEWS (DR)" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/p_ravindran.jpg" alt="P RAVINDRAN" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">P RAVINDRAN</h5>
+                  <p class="text-gray-600 text-sm text-center">Retd.Electrical Engineer </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/p_ravindran.jpg" alt="P RAVINDRAN" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">P RAVINDRAN</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Retd.Electrical Engineer </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">ROY N MATHEWS (DR)</h5>
-                <p class="card-text small">Retd.Head of Mechanical Engg. Department, MBITS College of Engineering </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/roy_varghese.jpg" data-lightbox="promoters" data-title="ROY VARGHESE">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/roy_varghese.jpg" alt="ROY VARGHESE" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/roy_n_mathews.jpg" alt="ROY N MATHEWS (DR)" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">ROY N MATHEWS (DR)</h5>
+                  <p class="text-gray-600 text-sm text-center">Retd.Head of Mechanical Engg. Department, MBITS College of Engineering </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/roy_n_mathews.jpg" alt="ROY N MATHEWS (DR)" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">ROY N MATHEWS (DR)</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Retd.Head of Mechanical Engg. Department, MBITS College of Engineering </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">ROY VARGHESE</h5>
-                <p class="card-text small">RTD. DIG of Registration, Govt of Kerala </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/saji_c_b.jpg" data-lightbox="promoters" data-title="SAJI C B (DR)">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/saji_c_b.jpg" alt="SAJI C B (DR)" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/roy_varghese.jpg" alt="ROY VARGHESE" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">ROY VARGHESE</h5>
+                  <p class="text-gray-600 text-sm text-center">RTD. DIG of Registration, Govt of Kerala </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/roy_varghese.jpg" alt="ROY VARGHESE" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">ROY VARGHESE</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">RTD. DIG of Registration, Govt of Kerala </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SAJI C B (DR)</h5>
-                <p class="card-text small">Chairman, Province Academy of Career Education</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/saji_john.jpg" data-lightbox="promoters" data-title="SAJI JOHN">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/saji_john.jpg" alt="SAJI JOHN" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/saji_c_b.jpg" alt="SAJI C B (DR)" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SAJI C B (DR)</h5>
+                  <p class="text-gray-600 text-sm text-center">Chairman, Province Academy of Career Education</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/saji_c_b.jpg" alt="SAJI C B (DR)" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SAJI C B (DR)</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Chairman, Province Academy of Career Education</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SAJI JOHN</h5>
-                <p class="card-text small">Sr. Manager, Petrofac,Sharja,UAE </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/sherly_sunny_kutty.jpg" data-lightbox="promoters" data-title="SHERLY SUNNY KUTTY">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/sherly_sunny_kutty.jpg" alt="SHERLY SUNNY KUTTY" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/saji_john.jpg" alt="SAJI JOHN" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SAJI JOHN</h5>
+                  <p class="text-gray-600 text-sm text-center">Sr. Manager, Petrofac,Sharja,UAE </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/saji_john.jpg" alt="SAJI JOHN" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SAJI JOHN</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Sr. Manager, Petrofac,Sharja,UAE </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SHERLY SUNNY KUTTY</h5>
-                <p class="card-text small">Director, Supreme Allied Services Pvt.Ltd. Mumbai.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/sojan_lal_p.jpg" data-lightbox="promoters" data-title="SOJAN LAL P (DR)">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/sojan_lal_p.jpg" alt="SOJAN LAL P (DR)" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/sherly_sunny_kutty.jpg" alt="SHERLY SUNNY KUTTY" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SHERLY SUNNY KUTTY</h5>
+                  <p class="text-gray-600 text-sm text-center">Director, Supreme Allied Services Pvt.Ltd. Mumbai.</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/sherly_sunny_kutty.jpg" alt="SHERLY SUNNY KUTTY" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SHERLY SUNNY KUTTY</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Director, Supreme Allied Services Pvt.Ltd. Mumbai.</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SOJAN LAL P (DR)</h5>
-                <p class="card-text small">Principal, MBITS (Engineering College), Kothamangalam</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/shoy_kuriakose.jpg" data-lightbox="promoters" data-title="SHOY KURIAKOSE">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/shoy_kuriakose.jpg" alt="SHOY KURIAKOSE" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/sojan_lal_p.jpg" alt="SOJAN LAL P (DR)" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SOJAN LAL P (DR)</h5>
+                  <p class="text-gray-600 text-sm text-center">Principal, MBITS (Engineering College), Kothamangalam</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/sojan_lal_p.jpg" alt="SOJAN LAL P (DR)" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SOJAN LAL P (DR)</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Principal, MBITS (Engineering College), Kothamangalam</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SHOY KURIAKOSE</h5>
-                <p class="card-text small">Managing Director, Nursing Home in UK</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/suresh_k_k.jpg" data-lightbox="promoters" data-title="SURESH K K">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/suresh_k_k.jpg" alt="SURESH K K" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/shoy_kuriakose.jpg" alt="SHOY KURIAKOSE" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SHOY KURIAKOSE</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Director, Nursing Home in UK</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/shoy_kuriakose.jpg" alt="SHOY KURIAKOSE" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SHOY KURIAKOSE</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Director, Nursing Home in UK</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">SURESH K K</h5>
-                <p class="card-text small">Engineer turned Planter</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-            <div class="promoter-card card shadow-sm w-100 text-center h-100 d-flex flex-column justify-content-between">
-              <a href="/assets/img/promoters/vincentt_p_d.jpg" data-lightbox="promoters" data-title="VINCENTT P D">
-                <div class="promoter-avatar mx-auto mb-3" style="overflow:hidden; padding:0; background:#fff;">
-                  <img src="/assets/img/promoters/vincentt_p_d.jpg" alt="VINCENTT P D" style="width:70px; height:70px; object-fit:cover; border-radius:50%; border:2px solid #009688;">
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/suresh_k_k.jpg" alt="SURESH K K" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">SURESH K K</h5>
+                  <p class="text-gray-600 text-sm text-center">Engineer turned Planter</p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/suresh_k_k.jpg" alt="SURESH K K" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">SURESH K K</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Engineer turned Planter</p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
                 </div>
-              </a>
-              <div class="card-body flex-fill">
-                <h5 class="card-title mb-1">VINCENTT P D</h5>
-                <p class="card-text small">Managing Partner SVJS and Associates Company Secretaries, Kochi. </p>
-              </div>
+              </template>
+              <template x-data="{ open: false }">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:shadow-2xl transition cursor-pointer" @click="open = true">
+                  <img src="/assets/img/promoters/vincentt_p_d.jpg" alt="VINCENTT P D" class="w-24 h-24 object-cover rounded-full border-4 border-teal-500 mb-4 shadow" />
+                  <h5 class="text-lg font-semibold text-teal-700 mb-1">VINCENTT P D</h5>
+                  <p class="text-gray-600 text-sm text-center">Managing Partner SVJS and Associates Company Secretaries, Kochi. </p>
+                  <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.away="open = false">
+                    <div class="bg-white rounded-lg shadow-lg p-4 max-w-lg w-full flex flex-col items-center">
+                      <img src="/assets/img/promoters/vincentt_p_d.jpg" alt="VINCENTT P D" class="w-72 h-72 object-cover rounded-xl border-4 border-teal-500 mb-2" />
+                      <h5 class="text-lg font-semibold text-teal-700 mb-1">VINCENTT P D</h5>
+                      <p class="text-gray-600 text-sm text-center mb-2">Managing Partner SVJS and Associates Company Secretaries, Kochi. </p>
+                      <button @click="open = false" class="mt-2 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </template>
             </div>
           </div>
-        </div>
-      </div>
-      <style>
-        .about-feature-oval {
-          background: #fff;
-          border-radius: 50px / 32px;
-          box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-          min-height: 140px;
-          min-width: 220px;
-          max-width: 350px;
-          margin: 0 auto 1.5rem auto;
-          position: relative;
-        }
-        .oval-icon-wrap {
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          width: 100%;
-          margin-bottom: 0.7rem;
-        }
-        .about-feature-card {
-          min-height: 140px;
-        }
-        .about-img-modern {
-          box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-          border-radius: 18px;
-        }
-        .promoter-card {
-          border: none;
-          border-radius: 18px;
-          transition: transform 0.2s, box-shadow 0.2s;
-          background: #fff;
-          display: flex;
-          flex-direction: column;
-          height: 250px;
-          min-height: 250px;
-          max-height: 250px;
-        }
-        .promoter-card:hover {
-          transform: translateY(-8px) scale(1.03);
-          box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-        }
-        .promoter-avatar {
-          width: 70px;
-          height: 70px;
-          background: #009688;
-          color: #fff;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.7em;
-          font-weight: 700;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .promoter-card .card-title {
-          font-size: 1.1em;
-          font-weight: 600;
-          color: #009688;
-          background: #fff;
-          padding: 6px 0 4px 0;
-          border-radius: 8px;
-          margin-bottom: 0.5em;
-          box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-          display: inline-block;
-          width: 100%;
-        }
-        .promoter-card .card-text {
-          color: #555;
-        }
-      </style>
-    </section>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="/assets/css/lightbox.css" rel="stylesheet">
+          <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        </section>
+        <!-- ======= End Promoters Section ======= -->
+        <!-- ...existing code... -->
     {% include footer.html %}
     {% include scripts.html %}
     <script src="/assets/js/lightbox.min.js"></script>
