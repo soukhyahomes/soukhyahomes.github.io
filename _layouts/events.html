@@ -1,67 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body>
-    {% include nav.html %}
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs-contact" class="breadcrumbs">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Events</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Events</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <!-- End Breadcrumbs -->
+<head>
+  {% include head.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-teal-100 min-h-screen text-gray-800">
+  {% include nav.html %}
+  <!-- Breadcrumbs -->
+  <section class="w-full bg-gradient-to-r from-teal-600 to-green-400 py-8 shadow-2xl shadow-green-900/30">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Events</h2>
+      <ol class="flex space-x-2 text-white/90 text-lg mt-2 md:mt-0">
+        <li><a href="index.html" class="underline hover:text-yellow-200">Home</a></li>
+        <li>/</li>
+        <li>Events</li>
+      </ol>
+    </div>
+  </section>
 
-    <!-- ======= Event Section ======= -->
-    <section class="events py-5">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col text-center">
-            <h2 class="section-title" style="font-weight:700; font-size:2.3rem; color:#009688;">Moments of Soukhya</h2>
+  <!-- Event Gallery Section with 3D Transforms -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-teal-700 mb-2 tracking-tight drop-shadow-lg">Moments of Soukhya</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <!-- Event Images: Each image is a separate block for easy modification -->
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (2).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (2).jpg" alt="Event 1" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
           </div>
         </div>
-        <div class="row" id="event-gallery">
-          <!-- Event Gallery Grid -->
-          {% assign event_images = "Soukhya_homes_gallery (2).jpg,Soukhya_homes_gallery (3).jpg,Soukhya_homes_gallery (4).jpg,Soukhya_homes_gallery (5).jpg,Soukhya_homes_gallery (6).jpg,Soukhya_homes_gallery (7).jpg,Soukhya_homes_gallery (8).jpg,Soukhya_homes_gallery (9).jpg,Soukhya_homes_gallery (10).jpg,Soukhya_homes_gallery (11).jpg,Soukhya_homes_gallery (12).jpg,Soukhya_homes_gallery (13).jpg,Soukhya_homes_gallery (14).jpg" | split: "," %}
-          {% for img in event_images %}
-          <div class="col-md-4 mb-4 d-flex align-items-center justify-content-center">
-            <div class="card event-card shadow-sm h-100 d-flex align-items-center justify-content-center" style="background:#fff;">
-              <a href="/assets/img/{{ img }}" data-lightbox="events">
-                <img src="/assets/img/{{ img }}" class="event-img" alt="Event {{ forloop.index }}" style="display:block; margin-left:auto; margin-right:auto; max-width:100%; height:auto;">
-              </a>
-            </div>
-            <div style="height: 3em;"></div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (3).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (3).jpg" alt="Event 2" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
           </div>
-          {% endfor %}
         </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <h3>Event Highlights Video</h3>
-            <video width="80%" controls style="max-width:700px; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.1);">
-              <source src="/assets/img/portfolio/PXL_20231231_152446380.TS.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (4).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (4).jpg" alt="Event 3" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (5).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (5).jpg" alt="Event 4" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (6).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (6).jpg" alt="Event 5" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (7).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (7).jpg" alt="Event 6" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (8).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (8).jpg" alt="Event 7" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (9).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (9).jpg" alt="Event 8" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (10).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (10).jpg" alt="Event 9" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (11).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (11).jpg" alt="Event 10" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (12).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (12).jpg" alt="Event 11" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (13).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (13).jpg" alt="Event 12" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
+          </div>
+        </div>
+        <div class="group perspective-1000">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <a href="/assets/img/Soukhya_homes_gallery (14).jpg" data-lightbox="events">
+              <img src="/assets/img/Soukhya_homes_gallery (14).jpg" alt="Event 13" class="w-full h-64 object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2">
+            </a>
           </div>
         </div>
       </div>
-    </section>
-    <style>
-      .event-card { transition: transform 0.2s, box-shadow 0.2s; border: none; border-radius: 16px; overflow: hidden; }
-      .event-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
-      .event-img { height: 250px; object-fit: cover; border-top-left-radius: 16px; border-top-right-radius: 16px; }
-      .section-title { font-weight: 700; font-size: 2.5rem; }
-      .section-subtitle { color: #6c757d; font-size: 1.1rem; }
-    </style>
-    <!-- ============= Footer section ============= -->
-    {% include footer.html %}
-    {% include scripts.html %}
-    <!-- Lightbox JS (if not already included) -->
-    <link href="/assets/css/lightbox.css" rel="stylesheet">
-    <script src="/assets/js/lightbox.min.js"></script>
+      <div class="mt-16 text-center">
+        <h3 class="text-2xl font-bold mb-4 text-teal-700">Event Highlights Video</h3>
+        <div class="flex justify-center">
+          <video class="rounded-2xl shadow-2xl border-4 border-teal-200" width="80%" style="max-width:700px;" controls>
+            <source src="/assets/img/portfolio/PXL_20231231_152446380.TS.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include footer.html %}
+  {% include scripts.html %}
+  <link href="/assets/css/lightbox.css" rel="stylesheet">
+  <script src="/assets/js/lightbox.min.js"></script>
+  <style>
+    .perspective-1000 { perspective: 1000px; }
+  </style>
 </body>
 </html>

@@ -1,315 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+<head>
+  {% include head.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-teal-100 min-h-screen text-gray-800">
+  {% include nav.html %}
+  <!-- Facilities Hero Section -->
+  <section class="relative flex items-center justify-center min-h-[240px] bg-cover bg-center" style="background-image: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/fclty-bg.jpg');">
+    <div class="container mx-auto px-4 text-center py-12">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-2 tracking-wide">Facilities at Soukhya</h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-4">Comfort, care, and convenience for a vibrant retirement life</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-3">
+        <span class="px-6 py-2 rounded-full bg-white/90 text-teal-700 font-semibold shadow-md text-lg">Safe & Secure</span>
+        <span class="px-6 py-2 rounded-full bg-white/90 text-teal-700 font-semibold shadow-md text-lg">Community Living</span>
+        <span class="px-6 py-2 rounded-full bg-white/90 text-teal-700 font-semibold shadow-md text-lg">Personalized Care</span>
+      </div>
+    </div>
+  </section>
 
-<body style="position:relative;">
-    <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;background:url('/assets/img/fclty-bg.jpg') center/cover no-repeat;opacity:0.2;"></div>
-    {% include nav.html %}
-    <!-- ======= Facilities Hero Section ======= -->
-    <section class="facilities-hero d-flex align-items-center" style="background: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/fclty-bg.jpg') center/cover no-repeat; min-height: 240px; color: #fff;">
-      <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2" style="letter-spacing:1px;">Facilities at Soukhya</h1>
-        <p class="lead mb-3">Comfort, care, and convenience for a vibrant retirement life</p>
-        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-3">
-          <span class="badge badge-pill badge-success px-4 py-2" style="background:#fff;color:#009688;font-size:1.1rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.08);">Safe & Secure</span>
-          <span class="badge badge-pill badge-info px-4 py-2" style="background:#fff;color:#009688;font-size:1.1rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.08);">Community Living</span>
-          <span class="badge badge-pill badge-warning px-4 py-2" style="background:#fff;color:#009688;font-size:1.1rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.08);">Personalized Care</span>
+  <!-- Main Facilities Section -->
+  <section class="py-16 bg-gradient-to-br from-white via-teal-50 to-green-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-teal-700 mb-2 tracking-tight">Our Core Facilities</h2>
+        <p class="text-gray-500 text-lg">Designed for comfort, safety, and a vibrant community life</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <!-- Facility Cards -->
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-bed fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Luxury Studio Apartments / Villas</h5>
+          <p class="text-gray-600">Fully furnished, air-conditioned bedroom with twin bed, drawing room, kitchenette, and balcony with a view of luscious greenery.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-seedling fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Landscaped Yard & Fruit Garden</h5>
+          <p class="text-gray-600">Fully landscaped yard with walkway, organic fruit garden, and a fish pond for a serene environment.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-utensils fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Dining & Food</h5>
+          <p class="text-gray-600">Restaurant-like dining area, food of your choice, and a modern kitchen for participatory cooking.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-dumbbell fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Fitness & Wellness</h5>
+          <p class="text-gray-600">Well-equipped fitness centre, yoga & meditation zone, and an Ayurveda wellness centre with trained practitioners.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-book-open fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Library & Entertainment</h5>
+          <p class="text-gray-600">Library, reading room, indoor/outdoor games, mini theatre, and free WiFi in rooms.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-user-nurse fa-3x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Medical & Assisted Living</h5>
+          <p class="text-gray-600">Doctor & clinic, daily visits, MoU with hospitals, assisted living support, and full-time caretaker.</p>
         </div>
       </div>
-    </section>
-    <!-- ======= End Facilities Hero Section ======= -->
+    </div>
+  </section>
 
-    <!-- ======= Main Facilities Section ======= -->
-    <section class="py-5" style="background:#f8fafc;">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col text-center">
-            <h2 class="section-title" style="font-weight:700;letter-spacing:0.5px;">Our Core Facilities</h2>
-            <p class="section-subtitle text-muted">Designed for comfort, safety, and a vibrant community life</p>
-          </div>
+  <!-- Facilities on Demand Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-teal-700 mb-2 tracking-tight">Facilities on Demand</h2>
+        <p class="text-gray-500 text-lg">Tailor-made services and need-based features for a wholesome, active, and joyful time</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Demand Cards -->
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-bus fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Travel to City</h6>
         </div>
-        <div class="row g-4 justify-content-center core-facilities" style="font-size: 1.4rem;">
-          <!-- Facility Cards (remove min-height for standardizing) -->
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-bed fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Luxury Studio Apartments / Villas</h5>
-              <p class="text-muted">Fully furnished, air-conditioned bedroom with twin bed, drawing room, kitchenette, and balcony with a view of luscious greenery.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-seedling fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Landscaped Yard & Fruit Garden</h5>
-              <p class="text-muted">Fully landscaped yard with walkway, organic fruit garden, and a fish pond for a serene environment.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-utensils fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Dining & Food</h5>
-              <p class="text-muted">Restaurant-like dining area, food of your choice, and a modern kitchen for participatory cooking.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-dumbbell fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Fitness & Wellness</h5>
-              <p class="text-muted">Well-equipped fitness centre, yoga & meditation zone, and an Ayurveda wellness centre with trained practitioners.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-book-open fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Library & Entertainment</h5>
-              <p class="text-muted">Library, reading room, indoor/outdoor games, mini theatre, and free WiFi in rooms.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="facility-card card h-100 text-center p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-user-nurse fa-3x mb-3 facility-icon"></i>
-              <h5 class="mb-2">Medical & Assisted Living</h5>
-              <p class="text-muted">Doctor & clinic, daily visits, MoU with hospitals, assisted living support, and full-time caretaker.</p>
-            </div>
-          </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-hospital fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Hospitalisation</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-wheelchair fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Wheel Chair</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-user-nurse fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Full Time Nursing</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-tree fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Picnics</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-ticket fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Ticket Booking</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-bed fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Guest Room | Guest House</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-plus fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Any Additional Facility in the Room</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-taxi fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Pickups and Droppings for Travel</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-piggy-bank fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Treasury Service • Banking</h6>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-shopping-cart fa-2x mb-2 text-teal-600"></i>
+          <h6 class="text-lg font-semibold">Purchases/Shopping</h6>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======= Facilities on Demand Section ======= -->
-    <section class="py-5" style="background:#fff;">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col text-center">
-            <h2 class="section-title" style="font-weight:700;letter-spacing:0.5px;">Facilities on Demand</h2>
-            <p class="section-subtitle text-muted">Tailor-made services and need-based features for a wholesome, active, and joyful time</p>
-          </div>
+  <!-- Special Features Section -->
+  <section class="py-16 bg-gradient-to-br from-white via-teal-50 to-green-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-teal-700 mb-2 tracking-tight">Special Features</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <!-- Feature Cards -->
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-leaf fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Amazing Atmosphere</h5>
+          <p class="text-gray-600">Situated in the middle of a panoramic surrounding. Calm ambience with singing of birds. Full campus is planted with fruit trees and green natural lawns. It is an excellent place for relaxed living.</p>
         </div>
-        <div class="row g-4 justify-content-center" style="font-size: 1.4rem;">
-          <!-- Demand Cards -->
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-bus fa-2x mb-2 facility-icon"></i>
-              <h6>Travel to City</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-hospital fa-2x mb-2 facility-icon"></i>
-              <h6>Hospitalisation</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-wheelchair fa-2x mb-2 facility-icon"></i>
-              <h6>Wheel Chair</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-user-nurse fa-2x mb-2 facility-icon"></i>
-              <h6>Full Time Nursing</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-tree fa-2x mb-2 facility-icon"></i>
-              <h6>Picnics</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-ticket fa-2x mb-2 facility-icon"></i>
-              <h6>Ticket Booking</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-bed fa-2x mb-2 facility-icon"></i>
-              <h6>Guest Room | Guest House</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-plus fa-2x mb-2 facility-icon"></i>
-              <h6>Any Additional Facility in the Room</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-taxi fa-2x mb-2 facility-icon"></i>
-              <h6>Pickups and Droppings for Travel</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-piggy-bank fa-2x mb-2 facility-icon"></i>
-              <h6>Treasury Service • Banking</h6>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="facility-demand-card card h-100 text-center p-3 shadow-sm border-accent">
-              <i class="fa-solid fa-shopping-cart fa-2x mb-2 facility-icon"></i>
-              <h6>Purchases/Shopping</h6>
-            </div>
-          </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-car-side fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Vehicle & Driver</h5>
+          <p class="text-gray-600">Car and driver is available in the campus for emergency services. On call vehicles are also made available for any personal planned travels like airport pickup and drop, picnic etc.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-person-praying fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Yoga for Relaxation</h5>
+          <p class="text-gray-600">A place for Yoga is provided. A yoga trainer will visit occasionally.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-stethoscope fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Latest Medical Care</h5>
+          <p class="text-gray-600">Daily visit by a doctor is arranged. Soukhya has signed MoU with two multi speciality hospitals. One can reach the hospitals in 15 minutes by car.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-hands-helping fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Assisted Living Support</h5>
+          <p class="text-gray-600">Soukhya will arrange full time assistance for the needy inmates.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-user-shield fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Full Time Caretaker</h5>
+          <p class="text-gray-600">Caretaker is residing inside the campus for making their service always available.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-car fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Car Parking and Guest Apartment</h5>
+          <p class="text-gray-600">Separate car parking for residents, visitors and guest apartments will be provided.</p>
+        </div>
+        <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-green-700/30 transition-all duration-300">
+          <i class="fa-solid fa-chess-board fa-2x mb-4 text-teal-600"></i>
+          <h5 class="text-xl font-bold mb-2">Entertainments</h5>
+          <p class="text-gray-600">Facilities for indoor and outdoor games and a library with reading room will be provided. Mini theatre for TV is arranged and Free wifi in rooms will be provided.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======= Special Features Section ======= -->
-    <section class="py-5" style="background:#f8fafc;">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col text-center">
-            <h2 class="section-title" style="font-weight:700;letter-spacing:0.5px;">Special Features</h2>
-          </div>
-        </div>
-        <div class="row g-4 justify-content-center special-features">
-          <!-- Feature Cards with Icons -->
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-leaf fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Amazing Atmosphere</h5>
-              <p>Situated in the middle of a panoramic surrounding. Calm ambience with singing of birds. Full campus is planted with fruit trees and green natural lawns. It is an excellent place for relaxed living.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-car-side fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Vehicle & Driver</h5>
-              <p>Car and driver is available in the campus for emergency services. On call vehicles are also made available for any personal planned travels like airport pickup and drop, picnic etc.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-person-praying fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Yoga for Relaxation</h5>
-              <p>A place for Yoga is provided. A yoga trainer will visit occasionally.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-stethoscope fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Latest Medical Care</h5>
-              <p>Daily visit by a doctor is arranged. Soukhya has signed MoU with two multi speciality hospitals. One can reach the hospitals in 15 minutes by car.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-hands-helping fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Assisted Living Support</h5>
-              <p>Soukhya will arrange full time assistance for the needy inmates.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-user-shield fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Full Time Caretaker</h5>
-              <p>Caretaker is residing inside the campus for making their service always available.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-car fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Car Parking and Guest Apartment</h5>
-              <p>Separate car parking for residents, visitors and guest apartments will be provided.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="feature-card card h-100 p-4 shadow-sm border-accent">
-              <i class="fa-solid fa-chess-board fa-2x mb-2 facility-icon"></i>
-              <h5 class="mb-2">Entertainments</h5>
-              <p>Facilities for indoor and outdoor games and a library with reading room will be provided. Mini theatre for TV is arranged and Free wifi in rooms will be provided.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======= Call to Action Section ======= -->
-    <section class="py-4" style="background:linear-gradient(90deg,#009688 60%,#00bfae 100%);color:#fff;">
-      <div class="container text-center">
-        <h4 class="mb-2" style="font-weight:600;">Ready to experience Soukhya's world-class facilities?</h4>
-        <p class="mb-3">Contact us today to schedule a visit or learn more about our vibrant community!</p>
-        <a href="/contact" class="btn btn-light px-4 py-2" style="color:#009688;font-weight:600;font-size:1.1rem;">Contact Us</a>
-      </div>
-    </section>
-
-    <style>
-      .facilities-hero { min-height: 240px; }
-      .facility-card, .facility-demand-card, .feature-card {
-        border: none;
-        border-radius: 18px;
-        transition: transform 0.2s, box-shadow 0.2s;
-        background: #fff;
-        box-shadow: 0 2px 12px rgba(0,150,136,0.07);
-      }
-      /* Add spacing between core facilities boxes */
-      .row.g-4.core-facilities > [class*='col-'] {
-        margin-bottom: 2.2rem;
-      }
-      .facility-card:hover, .facility-demand-card:hover, .feature-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 8px 32px rgba(0,150,136,0.13);
-        border-color: #00bfae;
-      }
-      .facility-icon {
-        color: #009688;
-        text-shadow: 0 2px 8px rgba(0,150,136,0.08);
-      }
-      .border-accent {
-        border: 2px solid #e0f2f1 !important;
-      }
-      .section-title { font-size: 2.3rem; font-weight: 700; }
-      .section-subtitle { font-size: 1.1rem; color: #6c757d; }
-      /* Facilities on Demand: increase size and spacing */
-      .facility-demand-card {
-        font-size: 1.15rem;
-        min-height: 140px;
-        padding: 2rem 1rem !important;
-        margin-bottom: 2rem;
-      }
-      .facility-demand-card i {
-        font-size: 2.5rem !important;
-      }
-      /* Special Features: standardized format and bold headings */
-      .feature-card {
-        min-height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2rem 1.5rem !important;
-      }
-      .feature-card h5 {
-        font-weight: bold;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-      }
-      @media (max-width: 991px) {
-        .facility-card, .facility-demand-card, .feature-card {
-          min-height: unset;
-        }
-        .feature-card { padding: 1.2rem !important; }
-      }
-      @media (max-width: 767px) {
-        .facilities-hero { min-height: 120px; }
-        .section-title { font-size: 1.5rem; }
-        .facility-card, .facility-demand-card, .feature-card { padding: 1.2rem !important; }
-        .row.g-4.core-facilities > [class*='col-'] { margin-bottom: 1.2rem; }
-        .facility-demand-card { font-size: 1rem; padding: 1.2rem !important; }
-        .feature-card { min-height: unset; }
-      }
-      .badge { border-radius: 30px; margin: 0 0.3rem 0.5rem 0.3rem; }
-      .special-features > [class*='col-'] {
-        margin-bottom: 2.2rem;
-      }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {% include footer.html %}
-    {% include scripts.html %}
-
+  <!-- Call to Action Section -->
+  <section class="py-10 bg-gradient-to-r from-teal-600 to-green-400 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h4 class="text-2xl md:text-3xl font-bold mb-2">Ready to experience Soukhya's world-class facilities?</h4>
+      <p class="mb-4 text-lg">Contact us today to schedule a visit or learn more about our vibrant community!</p>
+      <a href="/contact" class="inline-block px-8 py-3 rounded-2xl bg-white/90 text-teal-700 font-bold text-lg shadow-lg border-2 border-teal-500 hover:bg-teal-500 hover:text-white transition">Contact Us</a>
+    </div>
+  </section>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% include footer.html %}
+  {% include scripts.html %}
 </body>
-
 </html>
