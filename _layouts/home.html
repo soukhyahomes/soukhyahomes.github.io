@@ -2,123 +2,193 @@
 <html lang="en">
 <head>
   {% include head.html %}
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-teal-50 via-white to-green-100 text-gray-800 min-h-screen">
   {% include nav.html %}
 
-  <!-- Banner Section -->
-  <section class="relative w-full h-[60vh] min-h-[350px] flex items-end justify-start bg-cover bg-center" style="background-image: url('/assets/img/slider/1banner1.jpg');">
-    <div class="absolute left-6 bottom-6 z-10 hidden md:flex flex-col gap-3">
-      <a href="#contact" class="px-6 py-3 rounded-xl shadow-lg bg-white text-teal-600 font-bold text-lg border-2 border-teal-500 hover:bg-teal-500 hover:text-white transition">Enquire Now</a>
-      <a href="/assets/brochure.pdf" target="_blank" class="px-6 py-3 rounded-xl shadow-lg bg-white text-green-600 font-bold text-lg border-2 border-green-500 hover:bg-green-500 hover:text-white transition">Download Brochure</a>
+  <!-- Banner Section: Fullscreen, Glassmorphism, Animated Gradient Overlay -->
+  <section class="relative w-full h-[70vh] min-h-[400px] flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/img/slider/1banner1.jpg');">
+    <div class="absolute inset-0 bg-gradient-to-tr from-teal-400/70 via-transparent to-green-300/60 animate-gradient-x"></div>
+    <div class="relative z-10 flex flex-col items-center text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4 animate-fade-in">Luxury Community Living for Senior Citizens</h1>
+      <p class="text-lg md:text-2xl text-white/90 mb-8 animate-fade-in delay-200">We take pride in taking care of people</p>
+      <div class="flex gap-4 animate-fade-in delay-300">
+        <a href="#contact" class="px-8 py-3 rounded-2xl bg-white/80 backdrop-blur-md text-teal-700 font-bold text-lg shadow-lg border-2 border-teal-500 hover:bg-teal-500 hover:text-white transition">Enquire Now</a>
+        <a href="/assets/brochure.pdf" target="_blank" class="px-8 py-3 rounded-2xl bg-white/80 backdrop-blur-md text-green-700 font-bold text-lg shadow-lg border-2 border-green-500 hover:bg-green-500 hover:text-white transition">Download Brochure</a>
+      </div>
     </div>
   </section>
 
-  <!-- Welcome Section -->
-  <section class="relative py-12 overflow-hidden">
-    <!-- Celebration Graphics -->
-    <div class="hidden md:block absolute left-0 top-8 animate-bounce-slow">
-      <img src="/assets/img/celebration-left.gif" alt="Celebration Left" class="h-28">
+  <!-- Welcome Section with Confetti Animation -->
+  <section class="relative py-16 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <canvas id="confetti-canvas" class="w-full h-full"></canvas>
     </div>
-    <div class="hidden md:block absolute right-0 top-8 animate-bounce-slow delay-500">
-      <img src="/assets/img/celebration-right.gif" alt="Celebration Right" class="h-28">
-    </div>
-    <div class="container mx-auto px-4 text-center">
-      <h4 class="text-xl font-semibold text-teal-600 mb-2">Welcome to Soukhya Homes</h4>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4"><span class="text-teal-500">We make a Difference</span> in your lives</h1>
-      <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-2">COMMUNITY LIVING FOR SENIOR CITIZEN Retirement is the beginning of a new phase in life aiming at serene, calm and peaceful atmosphere. In soukhya villas it is envisaged to develop community living for senior citizens with all luxury and safety measures.</p>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h4 class="text-2xl font-semibold text-teal-600 mb-2 tracking-wider animate-fade-in">Welcome to Soukhya Homes</h4>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in delay-200"><span class="text-teal-500">We make a Difference</span> in your lives</h1>
+      <p class="max-w-2xl mx-auto text-xl text-gray-600 mb-2 animate-fade-in delay-300">COMMUNITY LIVING FOR SENIOR CITIZEN Retirement is the beginning of a new phase in life aiming at serene, calm and peaceful atmosphere. In soukhya villas it is envisaged to develop community living for senior citizens with all luxury and safety measures.</p>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-12 bg-gray-100">
+  <!-- Features Section: Modern Cards with Hover Effects -->
+  <section class="py-16 bg-gradient-to-br from-white via-teal-50 to-green-50">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-teal-600 mb-2">Why Choose Soukhya Homes?</h2>
-        <p class="text-gray-500 text-lg">A modern, safe, and vibrant community for your golden years</p>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-teal-600 mb-2 tracking-tight animate-fade-in">Why Choose Soukhya Homes?</h2>
+        <p class="text-gray-500 text-lg animate-fade-in delay-200">A modern, safe, and vibrant community for your golden years</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-1.png" alt="Atmosphere" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Amazing Atmosphere</h4>
-          <p class="text-gray-500 text-sm">Situated in the middle of a panoramic surrounding. Calm ambience with singing of birds, fruit trees, green natural lawn and also with a big pond having full of fancy fishes.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in">
+          <img src="/assets/img/icon-1.png" alt="Atmosphere" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Amazing Atmosphere</h4>
+          <p class="text-gray-600 text-base">Situated in the middle of a panoramic surrounding. Calm ambience with singing of birds, fruit trees, green natural lawn and also with a big pond having full of fancy fishes.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-2.png" alt="Medical Care" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Latest Medical Care</h4>
-          <p class="text-gray-500 text-sm">Daily visit of a doctor is arranged. Soukhya has signed MOU with two multi-speciality hospitals. The residents can reach the hospitals in 15 minutes by car.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in delay-100">
+          <img src="/assets/img/icon-2.png" alt="Medical Care" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Latest Medical Care</h4>
+          <p class="text-gray-600 text-base">Daily visit of a doctor is arranged. Soukhya has signed MOU with two multi-speciality hospitals. The residents can reach the hospitals in 15 minutes by car.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-3.png" alt="Vehicle & Driver" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Vehicle & Driver</h4>
-          <p class="text-gray-500 text-sm">Car and driver is available in the campus for emergency services, 24 x 7. Also made available for any personal planned travels like airport pickup and drop, picnic etc.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in delay-200">
+          <img src="/assets/img/icon-3.png" alt="Vehicle & Driver" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Vehicle & Driver</h4>
+          <p class="text-gray-600 text-base">Car and driver is available in the campus for emergency services, 24 x 7. Also made available for any personal planned travels like airport pickup and drop, picnic etc.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-4.png" alt="Yoga" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Yoga for Relaxation</h4>
-          <p class="text-gray-500 text-sm">Yoga performing place is provided. A yoga trainer will visit occasionally.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in delay-300">
+          <img src="/assets/img/icon-4.png" alt="Yoga" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Yoga for Relaxation</h4>
+          <p class="text-gray-600 text-base">Yoga performing place is provided. A yoga trainer will visit occasionally.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-5.png" alt="Assisted Living" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Assisted Living Support</h4>
-          <p class="text-gray-500 text-sm">Soukhya will arrange full time assistance for the needy inmates.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in delay-400">
+          <img src="/assets/img/icon-5.png" alt="Assisted Living" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Assisted Living Support</h4>
+          <p class="text-gray-600 text-base">Soukhya will arrange full time assistance for the needy inmates.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src="/assets/img/icon-6.png" alt="Caretaker" class="h-14 mb-3">
-          <h4 class="text-lg font-bold mb-1">Fulltime Caretaker</h4>
-          <p class="text-gray-500 text-sm">Caretaker is residing inside the campus for making their service available always.</p>
+        <div class="bg-white/80 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-teal-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 animate-fade-in delay-500">
+          <img src="/assets/img/icon-6.png" alt="Caretaker" class="h-16 mb-4 drop-shadow-md">
+          <h4 class="text-xl font-bold mb-2 text-teal-700">Fulltime Caretaker</h4>
+          <p class="text-gray-600 text-base">Caretaker is residing inside the campus for making their service available always.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about-us" class="py-16">
+  <!-- About Section: Glassmorphism Card -->
+  <section id="about-us" class="py-20">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 w-full mb-8 md:mb-0">
-          <img src="/assets/img/2smiles.jpg" alt="About Soukhya Homes" class="rounded-2xl shadow-xl w-full max-w-lg mx-auto">
+          <div class="rounded-3xl bg-white/70 backdrop-blur-lg shadow-2xl p-6 md:p-10">
+            <img src="/assets/img/2smiles.jpg" alt="About Soukhya Homes" class="rounded-2xl shadow-xl w-full max-w-lg mx-auto">
+          </div>
         </div>
         <div class="md:w-1/2 w-full">
-          <h2 class="text-3xl font-bold text-teal-600 mb-3">Soukhya Retirement Living</h2>
-          <h4 class="text-xl font-semibold mb-4">Expert Care of the Elderly</h4>
-          <p class="mb-4 text-gray-600">Retirement is the dawn of a new era. At Soukhya Villas, we offer a luxurious, resort-style living experience for seniors, surrounded by nature and a vibrant community. Enjoy safety, companionship, and a host of amenities designed for your comfort and well-being.</p>
-          <ul class="mb-6 space-y-2">
-            <li class="flex items-center text-gray-700"><span class="text-green-500 mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Luxury Studio Apartments & Villas</li>
-            <li class="flex items-center text-gray-700"><span class="text-green-500 mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Fully landscaped yard, organic fruit garden, and fish pond</li>
-            <li class="flex items-center text-gray-700"><span class="text-green-500 mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Fitness centre, yoga & meditation zone, library, and more</li>
-            <li class="flex items-center text-gray-700"><span class="text-green-500 mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Doctor & clinic, ayurveda wellness, and 24/7 security</li>
-          </ul>
-          <a href="about.html" class="inline-block px-6 py-3 rounded-xl bg-white border-2 border-teal-500 text-teal-600 font-bold shadow hover:bg-teal-500 hover:text-white transition">Learn More</a>
+          <div class="rounded-3xl bg-white/80 backdrop-blur-lg shadow-2xl p-8 md:p-12">
+            <h2 class="text-4xl font-bold text-teal-600 mb-3">Soukhya Retirement Living</h2>
+            <h4 class="text-2xl font-semibold mb-4">Expert Care of the Elderly</h4>
+            <p class="mb-4 text-gray-700 text-lg">Retirement is the dawn of a new era. At Soukhya Villas, we offer a luxurious, resort-style living experience for seniors, surrounded by nature and a vibrant community. Enjoy safety, companionship, and a host of amenities designed for your comfort and well-being.</p>
+            <ul class="mb-6 space-y-3">
+              <li class="flex items-center text-gray-700"><span class="text-green-500 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Luxury Studio Apartments & Villas</li>
+              <li class="flex items-center text-gray-700"><span class="text-green-500 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Fully landscaped yard, organic fruit garden, and fish pond</li>
+              <li class="flex items-center text-gray-700"><span class="text-green-500 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Fitness centre, yoga & meditation zone, library, and more</li>
+              <li class="flex items-center text-gray-700"><span class="text-green-500 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></span>Doctor & clinic, ayurveda wellness, and 24/7 security</li>
+            </ul>
+            <a href="about.html" class="inline-block px-8 py-3 rounded-2xl bg-gradient-to-r from-teal-400 to-green-400 text-white font-bold shadow-lg border-2 border-teal-500 hover:from-teal-600 hover:to-green-600 transition">Learn More</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Section -->
-  <section class="py-12 bg-gradient-to-r from-teal-400 to-green-200 text-white text-center">
+  <!-- Call to Action Section: Modern Gradient -->
+  <section class="py-16 bg-gradient-to-r from-teal-400 via-green-300 to-green-100 text-white text-center">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold mb-3">Ready to experience Soukhya Homes?</h2>
-      <p class="mb-6 text-lg">Contact us today to schedule a visit or learn more about our vibrant community.</p>
-      <a href="contact.html" class="inline-block px-8 py-3 rounded-xl bg-white text-teal-600 font-bold text-lg shadow-lg border-2 border-teal-500 hover:bg-teal-500 hover:text-white transition">Contact Us</a>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Ready to experience Soukhya Homes?</h2>
+      <p class="mb-8 text-xl animate-fade-in delay-200">Contact us today to schedule a visit or learn more about our vibrant community.</p>
+      <a href="contact.html" class="inline-block px-10 py-4 rounded-2xl bg-white/90 text-teal-600 font-bold text-xl shadow-xl border-2 border-teal-500 hover:bg-teal-500 hover:text-white transition animate-fade-in delay-300">Contact Us</a>
     </div>
   </section>
 
   {% include footer.html %}
   {% include scripts.html %}
 
+  <script>
+    // Simple confetti animation for welcome section
+    window.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('confetti-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W = canvas.width = window.innerWidth;
+      let H = canvas.height = 300;
+      let particles = [];
+      for (let i = 0; i < 60; i++) {
+        particles.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 8 + 4,
+          d: Math.random() * 60,
+          color: `hsl(${Math.random()*360},80%,60%)`,
+          tilt: Math.random() * 10 - 10
+        });
+      }
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < particles.length; i++) {
+          let p = particles[i];
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, false);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+        }
+        update();
+      }
+      let angle = 0;
+      function update() {
+        angle += 0.01;
+        for (let i = 0; i < particles.length; i++) {
+          let p = particles[i];
+          p.y += Math.cos(angle + p.d) + 1 + p.r/2;
+          p.x += Math.sin(angle) * 2;
+          if (p.x > W + 5 || p.x < -5 || p.y > H) {
+            if (i % 3 > 0) {
+              particles[i] = {x: Math.random() * W, y: -10, r: p.r, d: p.d, color: p.color, tilt: p.tilt};
+            } else {
+              if (Math.sin(angle) > 0) {
+                particles[i] = {x: -5, y: Math.random() * H, r: p.r, d: p.d, color: p.color, tilt: p.tilt};
+              } else {
+                particles[i] = {x: W+5, y: Math.random() * H, r: p.r, d: p.d, color: p.color, tilt: p.tilt};
+              }
+            }
+          }
+        }
+      }
+      setInterval(draw, 33);
+      window.addEventListener('resize', () => {
+        W = canvas.width = window.innerWidth;
+      });
+    });
+  </script>
   <style>
-    @keyframes bounce-slow {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-18px); }
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 6s ease-in-out infinite alternate;
     }
-    .animate-bounce-slow {
-      animation: bounce-slow 2.5s infinite;
+    @keyframes gradient-x {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
-    .delay-500 {
-      animation-delay: 1.25s;
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+    .animate-fade-in.delay-100 { animation-delay: 0.1s; }
+    .animate-fade-in.delay-200 { animation-delay: 0.2s; }
+    .animate-fade-in.delay-300 { animation-delay: 0.3s; }
+    .animate-fade-in.delay-400 { animation-delay: 0.4s; }
+    .animate-fade-in.delay-500 { animation-delay: 0.5s; }
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
   </style>
 </body>
