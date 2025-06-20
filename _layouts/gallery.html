@@ -13,505 +13,191 @@
     </div>
   </section>
 
-  <!-- Modern Gallery Section with Tailwind & Alpine.js Popup -->
+  <!-- Modern Gallery Section with Tailwind CSS only -->
   <section id="gallery" class="py-16 bg-gradient-to-br from-white via-teal-50 to-green-50">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <!-- Each image is a separate block for easy future edits, with 3D effect and standard size -->
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal1.jpg" alt="Gallery Image 1" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal1.jpg" alt="Gallery Image 1" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal2.jpg" alt="Gallery Image 2" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal2.jpg" alt="Gallery Image 2" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal21.jpg" alt="Gallery Image 3" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal21.jpg" alt="Gallery Image 3" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal20.jpg" alt="Gallery Image 4" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal20.jpg" alt="Gallery Image 4" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal5.jpg" alt="Gallery Image 5" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal5.jpg" alt="Gallery Image 5" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal6.jpg" alt="Gallery Image 6" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal6.jpg" alt="Gallery Image 6" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal22.jpg" alt="Gallery Image 7" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal22.jpg" alt="Gallery Image 7" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal8.jpg" alt="Gallery Image 8" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal8.jpg" alt="Gallery Image 8" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal9.jpg" alt="Gallery Image 9" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal9.jpg" alt="Gallery Image 9" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal10.jpg" alt="Gallery Image 10" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal10.jpg" alt="Gallery Image 10" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal11.jpg" alt="Gallery Image 11" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal11.jpg" alt="Gallery Image 11" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal12.jpg" alt="Gallery Image 12" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal12.jpg" alt="Gallery Image 12" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal28.jpg" alt="Gallery Image 13" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal28.jpg" alt="Gallery Image 13" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal29.jpg" alt="Gallery Image 14" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal29.jpg" alt="Gallery Image 14" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal30.jpg" alt="Gallery Image 15" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal30.jpg" alt="Gallery Image 15" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal31.jpg" alt="Gallery Image 16" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal31.jpg" alt="Gallery Image 16" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal27.jpg" alt="Gallery Image 17" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal27.jpg" alt="Gallery Image 17" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gal26.jpg" alt="Gallery Image 18" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gal26.jpg" alt="Gallery Image 18" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/Soukhya_homes_gallery (9).jpg" alt="Gallery Image 19" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/Soukhya_homes_gallery (9).jpg" alt="Gallery Image 19" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/cele_SH.jpg" alt="Gallery Image 20" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/cele_SH.jpg" alt="Gallery Image 20" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/Meet_SH.jpg" alt="Gallery Image 21" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/Meet_SH.jpg" alt="Gallery Image 21" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/flower_SH.jpg" alt="Gallery Image 22" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/flower_SH.jpg" alt="Gallery Image 22" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/Pinkk_SH.jpg" alt="Gallery Image 23" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/Pinkk_SH.jpg" alt="Gallery Image 23" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 9.jpg" alt="Gallery Image 24" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 9.jpg" alt="Gallery Image 24" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 13.jpg" alt="Gallery Image 25" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 13.jpg" alt="Gallery Image 25" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 14.jpg" alt="Gallery Image 26" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 14.jpg" alt="Gallery Image 26" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 15.jpg" alt="Gallery Image 27" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 15.jpg" alt="Gallery Image 27" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 16.jpg" alt="Gallery Image 28" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 16.jpg" alt="Gallery Image 28" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 17.jpg" alt="Gallery Image 29" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 17.jpg" alt="Gallery Image 29" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 21.jpg" alt="Gallery Image 30" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 21.jpg" alt="Gallery Image 30" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/gallery 5.jpg" alt="Gallery Image 31" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/gallery 5.jpg" alt="Gallery Image 31" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/sdown.jpg" alt="Gallery Image 32" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/sdown.jpg" alt="Gallery Image 32" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/hut_SH.jpg" alt="Gallery Image 33" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/hut_SH.jpg" alt="Gallery Image 33" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/Pink_SH.jpg" alt="Gallery Image 34" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/Pink_SH.jpg" alt="Gallery Image 34" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/portfolio/Play_area_SH.jpg" alt="Gallery Image 35" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/portfolio/Play_area_SH.jpg" alt="Gallery Image 35" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/Soukhya_homes_gallery (12).jpg" alt="Gallery Image 36" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/Soukhya_homes_gallery (12).jpg" alt="Gallery Image 36" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/Soukhya_homes_gallery (13).jpg" alt="Gallery Image 37" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/Soukhya_homes_gallery (13).jpg" alt="Gallery Image 37" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
-        <div x-data="{ open: false }">
-          <div class="cursor-pointer group flex flex-col" @click="open = true">
-            <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
-              <img src="/assets/img/Soukhya_homes_gallery (14).jpg" alt="Gallery Image 38" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
-            </div>
-          </div>
-          <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" @click.away="open = false">
-            <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full flex flex-col items-center">
-              <img src="/assets/img/Soukhya_homes_gallery (14).jpg" alt="Gallery Image 38" class="w-full max-w-2xl h-[60vh] object-contain rounded-xl mb-4" />
-              <button @click="open = false" class="mt-2 px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">Close</button>
-            </div>
-          </div>
-        </div>
+        <a href="/assets/img/portfolio/gal1.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal1.jpg" alt="Gallery Image 1" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal2.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal2.jpg" alt="Gallery Image 2" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal21.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal21.jpg" alt="Gallery Image 3" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal20.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal20.jpg" alt="Gallery Image 4" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal5.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal5.jpg" alt="Gallery Image 5" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal6.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal6.jpg" alt="Gallery Image 6" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal22.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal22.jpg" alt="Gallery Image 7" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal8.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal8.jpg" alt="Gallery Image 8" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal9.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal9.jpg" alt="Gallery Image 9" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal10.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal10.jpg" alt="Gallery Image 10" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal11.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal11.jpg" alt="Gallery Image 11" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal12.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal12.jpg" alt="Gallery Image 12" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal28.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal28.jpg" alt="Gallery Image 13" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal29.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal29.jpg" alt="Gallery Image 14" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal30.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal30.jpg" alt="Gallery Image 15" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal31.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal31.jpg" alt="Gallery Image 16" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal27.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal27.jpg" alt="Gallery Image 17" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gal26.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gal26.jpg" alt="Gallery Image 18" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" alt="Gallery Image 19" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" alt="Gallery Image 20" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/cele_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/cele_SH.jpg" alt="Gallery Image 21" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Meet_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Meet_SH.jpg" alt="Gallery Image 22" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/flower_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/flower_SH.jpg" alt="Gallery Image 23" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Pinkk_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Pinkk_SH.jpg" alt="Gallery Image 24" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 9.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 9.jpg" alt="Gallery Image 25" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 13.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 13.jpg" alt="Gallery Image 26" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 14.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 14.jpg" alt="Gallery Image 27" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 15.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 15.jpg" alt="Gallery Image 28" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 16.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 16.jpg" alt="Gallery Image 29" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 17.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 17.jpg" alt="Gallery Image 30" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 21.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 21.jpg" alt="Gallery Image 31" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/gallery 5.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/gallery 5.jpg" alt="Gallery Image 32" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/sdown.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/sdown.jpg" alt="Gallery Image 33" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/hut_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/hut_SH.jpg" alt="Gallery Image 34" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Pink_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Pink_SH.jpg" alt="Gallery Image 35" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
+        <a href="/assets/img/portfolio/Play_area_SH.jpg" target="_blank" class="group block">
+          <div class="relative bg-white/90 rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:-rotate-x-3 group-hover:scale-105" style="transform-style: preserve-3d;">
+            <img src="/assets/img/portfolio/Play_area_SH.jpg" alt="Gallery Image 36" class="w-full h-[336px] object-cover rounded-3xl shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" />
+          </div>
+        </a>
       </div>
     </div>
   </section>
