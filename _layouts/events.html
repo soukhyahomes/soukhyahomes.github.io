@@ -284,20 +284,16 @@
       </script>
       <br>
       <br>
-       <br>
-      <br>
-       <br>
-      <br>
       <!-- Articles from our Residents Section -->
       <section class="py-16" id="articles">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-2 sm:px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-extrabold text-teal-700 mb-4">Articles from our Residents</h2>
             <p class="text-lg text-gray-600">Stories, experiences, and insights shared by the Soukhya Homes community.</p>
           </div>
           <!-- Add article cards or content here -->
           <section class="py-4">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-0 sm:px-4">
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <!-- Article 1: Whispers of a Quiet Morning at Soukhya Homes -->
                 {% assign article1_img = "/assets/img/imginfra/infra (9).JPG" %}
@@ -446,6 +442,28 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
   </script>
   <style>
     .perspective-1000 { perspective: 1000px; }
+    @media (max-width: 640px) {
+      #articles .grid > div {
+        padding: 1.25rem !important;
+        border-left-width: 4px !important;
+        margin-bottom: 1.5rem !important;
+      }
+      #articles .absolute.top-0.right-0.mt-6.mr-6.w-52.md\:w-72.aspect-video.z-10 {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 0 1rem 0 !important;
+        aspect-ratio: 16/9 !important;
+        display: block !important;
+      }
+      #articles .absolute.top-0.right-0.mt-6.mr-6.w-52.md\:w-72.aspect-video.z-10 img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 1.5rem !important;
+      }
+      #articles .relative.z-20.mt-8 {
+        margin-top: 0.5rem !important;
+      }
+    }
   </style>
 </body>
 </html>
