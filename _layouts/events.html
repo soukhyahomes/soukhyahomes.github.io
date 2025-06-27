@@ -198,12 +198,12 @@
                 <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col border-l-8 border-teal-400 relative overflow-hidden">
                   {% if article1_img %}
                   <div class="absolute top-0 right-0 mt-6 mr-6 w-40 md:w-56 aspect-video z-10">
-                    <a href="{{ article1_img }}" data-lightbox="article1" tabindex="-1">
+                    <a href="{{ article1_img }}" data-lightbox="article1" rel="lightbox[article1]" tabindex="-1">
                       <img src="{{ article1_img }}" alt="Morning Nature" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-teal-100" />
                     </a>
                   </div>
                   {% endif %}
-                  <div class="relative z-20" style="text-align:justify;">
+                  <div class="relative z-20 md:pr-64" style="text-align:justify;">
                     <h3 class="text-2xl font-bold mb-4 text-teal-700">Whispers of a Quiet Morning at Soukhya Homes</h3>
                     <p class="text-gray-700 text-lg whitespace-pre-line">
 I sat quietly in my bedroom at Soukhya. Each morning, a familiar view gently unfolds before me through the sliding glass door—a scene both calm and constant, offering a deep, grounding sense of peace.
@@ -230,12 +230,12 @@ Each day begins with this quiet symphony: simple, unhurried, and full of grace.
                 <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col border-l-8 border-teal-400 relative overflow-hidden">
                   {% if article2_img %}
                   <div class="absolute top-0 right-0 mt-6 mr-6 w-40 md:w-56 aspect-video z-10">
-                    <a href="{{ article2_img }}" data-lightbox="article2" tabindex="-1">
+                    <a href="{{ article2_img }}" data-lightbox="article2" rel="lightbox[article2]" tabindex="-1">
                       <img src="{{ article2_img }}" alt="Rainy Day" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-teal-100" />
                     </a>
                   </div>
                   {% endif %}
-                  <div class="relative z-20" style="text-align:justify;">
+                  <div class="relative z-20 md:pr-64" style="text-align:justify;">
                     <h3 class="text-2xl font-bold mb-4 text-teal-700">The Beautiful Rain at Soukhya Homes</h3>
                     <p class="text-gray-700 text-lg whitespace-pre-line">
 Lately, every morning at Soukhya Homes begins with the gentle patter of rain. From the comfort of our bedrooms, we watch the world through misted windows—where the breeze turns cool and the landscape sparkles under fresh raindrops. The sun has become a shy visitor, rarely peeking through. Instead, the sky becomes a canvas—turning from deep grey to silver in moments, like a quiet play of moods above us.
@@ -260,12 +260,12 @@ Indeed, the rains at Soukhya are not just beautiful—they are deeply comforting
                 <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col border-l-8 border-teal-400 relative overflow-hidden">
                   {% if article3_img %}
                   <div class="absolute top-0 right-0 mt-6 mr-6 w-40 md:w-56 aspect-video z-10">
-                    <a href="{{ article3_img }}" data-lightbox="article3" tabindex="-1">
+                    <a href="{{ article3_img }}" data-lightbox="article3" rel="lightbox[article3]" tabindex="-1">
                       <img src="{{ article3_img }}" alt="Memory Tribute" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-teal-100" />
                     </a>
                   </div>
                   {% endif %}
-                  <div class="relative z-20" style="text-align:justify;">
+                  <div class="relative z-20 md:pr-64" style="text-align:justify;">
                     <h3 class="text-2xl font-bold mb-4 text-teal-700">In Loving Memory of Mrs. Mary Poulose</h3>
                     <p class="text-gray-700 text-lg whitespace-pre-line">
 Two days ago, we received the sad news of the passing of Mrs. Mary Poulose, beloved wife of our Director, Mr. K. C. Poulose. Today marks the final ceremony in her memory.
@@ -280,16 +280,16 @@ Mrs. Mary was a quiet soul, and though time may soften her memory, for those who
                   </div>
                 </div>
                 <!-- Article 4: By the Pond at Soukhya Homes -->
-                {% assign article4_img = "/assets/img/imginfra/infra_bg.jpg" %} {# Change this path to your preferred image #}
+                {% assign article4_img = "/assets/img/imginfra/infra_bg.jpg" %} 
                 <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col border-l-8 border-teal-400 relative overflow-hidden">
                   {% if article4_img %}
                   <div class="absolute top-0 right-0 mt-6 mr-6 w-40 md:w-56 aspect-video z-10">
-                    <a href="{{ article4_img }}" data-lightbox="article4" tabindex="-1">
+                    <a href="{{ article4_img }}" data-lightbox="article4" rel="lightbox[article4]" tabindex="-1">
                       <img src="{{ article4_img }}" alt="By the Pond" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-teal-100" />
                     </a>
                   </div>
                   {% endif %}
-                  <div class="relative z-20" style="text-align:justify;">
+                  <div class="relative z-20 md:pr-64" style="text-align:justify;">
                     <h3 class="text-2xl font-bold mb-4 text-teal-700">By the Pond at Soukhya Homes</h3>
                     <p class="text-gray-700 text-lg whitespace-pre-line">
 One morning, over a quiet breakfast, one of our esteemed directors casually mentioned his wish to write a few lines about the fish pond here at Soukhya Homes. A man of many accomplishments, he has spent his life as an academician, engineer, and dedicated teacher. In retirement, he has discovered renewed joy in cultivating the earth—an interest that has blossomed into a deep and rewarding passion.
@@ -318,7 +318,17 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
   {% include footer.html %}
   {% include scripts.html %}
   <link href="/assets/css/lightbox.css" rel="stylesheet">
-  <script src="/assets/js/lightbox.min.js"></script>
+  <script src="/assets/js/lightbox.min.js" onload="console.log('Lightbox JS loaded:', typeof lightbox !== 'undefined'); if(typeof lightbox==='undefined'){console.error('Lightbox failed to load!');}" onerror="console.error('Failed to load lightbox.min.js');"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if lightbox is available
+      if (typeof lightbox === 'undefined') {
+        console.error('Lightbox is not defined. Check /assets/js/lightbox.min.js path.');
+      } else {
+        console.log('Lightbox is ready.');
+      }
+    });
+  </script>
   <style>
     .perspective-1000 { perspective: 1000px; }
   </style>
