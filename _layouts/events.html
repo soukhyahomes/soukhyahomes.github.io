@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   {% include head.html %}
-  <link href="/assets/css/tailwind-built.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-green-50 via-white to-teal-100 min-h-screen text-gray-800">
   {% include nav.html %}
@@ -197,13 +197,15 @@
                 {% assign article1_img = "/assets/img/imginfra/infra (9).JPG" %}
                 <div class="bg-white/90 rounded-3xl shadow-2xl p-8 flex flex-col border-l-8 border-teal-400 relative overflow-hidden">
                   {% if article1_img %}
-                  <div class="absolute top-0 right-0 mt-6 mr-6 w-40 md:w-56 aspect-video z-10">
+                  <!-- Image is 30% larger, landscape, right side -->
+                  <div class="absolute top-0 right-0 mt-6 mr-6 w-52 md:w-72 aspect-video z-10">
                     <a href="{{ article1_img }}" data-lightbox="article1" rel="lightbox[article1]" tabindex="-1">
                       <img src="{{ article1_img }}" alt="Morning Nature" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-teal-100" />
                     </a>
                   </div>
                   {% endif %}
-                  <div class="relative z-20 md:pr-64" style="text-align:justify;">
+                  <!-- Content beside image (with right padding) -->
+                  <div class="relative z-20 md:pr-72" style="text-align:justify;">
                     <h3 class="text-2xl font-bold mb-4 text-teal-700">Whispers of a Quiet Morning at Soukhya Homes</h3>
                     <p class="text-gray-700 text-lg whitespace-pre-line">
 I sat quietly in my bedroom at Soukhya. Each morning, a familiar view gently unfolds before me through the sliding glass door—a scene both calm and constant, offering a deep, grounding sense of peace.
@@ -215,7 +217,11 @@ Beyond the tree, a row of tall bamboo plants sways gently in the morning breeze.
 The shuttle court nearby, once alive with voices and laughter, now lies still and undisturbed. Yet in these early hours, the hush is gently broken by birdsong—melodic and bright, as though nature itself is waking slowly, greeting the day with song.
 
 Along the court’s edges, flowering plants are in full bloom. On the gentle slope beyond, larger bushes are adorned with delicate white and pink blossoms. Their subtle fragrance drifts in on the breeze, carrying with it a quiet joy, fresh and effortless.
-
+                    </p>
+                  </div>
+                  <!-- Content below image (full width, no right padding) -->
+                  <div class="relative z-20 mt-2" style="text-align:justify;">
+                    <p class="text-gray-700 text-lg whitespace-pre-line">
 These small, everyday moments shape the rhythm of my mornings. They don’t shout or demand attention, yet they speak clearly—of beauty, of stillness, of time unfolding at its own pace.
 
 Each day begins with this quiet symphony: simple, unhurried, and full of grace.
