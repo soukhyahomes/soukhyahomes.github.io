@@ -1,328 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body>
-    {% include nav.html %}
-    <!-- ======= Gallery Hero Section ======= -->
-    <section class="relative flex items-center justify-center min-h-[260px] bg-cover bg-center" style="background-image: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('assets\img\abt-bg.jpg'); color: #fff;">
-      <div class="container mx-auto px-4 text-center py-12">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-2">Gallery</h1>
-        <p class="text-xl md:text-2xl text-white/90 mb-4">Explore the moments and memories at Soukhya Homes</p>
-      </div>
-    </section>
-    <!-- ======= End Gallery Hero Section ======= -->
+<head>
+  {% include head.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-teal-100 min-h-screen text-gray-800">
+  {% include nav.html %}
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center min-h-[260px] bg-cover bg-center" style="background-image: linear-gradient(rgba(0,150,136,0.7),rgba(0,150,136,0.7)), url('/assets/img/abt-bg.jpg'); color: #fff;">
+    <div class="container mx-auto px-4 text-center py-12">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-2">Gallery</h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-4">Explore the moments and memories at Soukhya Homes</p>
+    </div>
+  </section>
+  <!-- ======= End Gallery Hero Section ======= -->
 
-    <!-- ============= Portfolio section Start ============= -->
-    <section id="gallery" class="py-5" style="background:#f8fafc;">
-      <div class="container">
-        <div id="image-gallery">
-          <div class="row g-4 justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal1.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal1.jpg" class="card-img-top gallery-img" alt="Gallery Image 1">
-                </a>
-              </div>
+  <!-- ============= Portfolio section Start ============= -->
+  <section id="gallery" class="py-5" style="background:#f8fafc;">
+    <div class="container">
+      <div id="image-gallery">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal1.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal1.jpg" class="card-img-top gallery-img" alt="Gallery Image 1">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal2.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal2.jpg" class="card-img-top gallery-img" alt="Gallery Image 2">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal2.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal2.jpg" class="card-img-top gallery-img" alt="Gallery Image 2">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal21.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal21.jpg" class="card-img-top gallery-img" alt="Gallery Image 3">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal21.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal21.jpg" class="card-img-top gallery-img" alt="Gallery Image 3">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal20.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal20.jpg" class="card-img-top gallery-img" alt="Gallery Image 4">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal20.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal20.jpg" class="card-img-top gallery-img" alt="Gallery Image 4">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal5.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal5.jpg" class="card-img-top gallery-img" alt="Gallery Image 5">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal5.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal5.jpg" class="card-img-top gallery-img" alt="Gallery Image 5">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal6.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal6.jpg" class="card-img-top gallery-img" alt="Gallery Image 6">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal6.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal6.jpg" class="card-img-top gallery-img" alt="Gallery Image 6">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal22.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal22.jpg" class="card-img-top gallery-img" alt="Gallery Image 7">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal22.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal22.jpg" class="card-img-top gallery-img" alt="Gallery Image 7">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal8.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal8.jpg" class="card-img-top gallery-img" alt="Gallery Image 8">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal8.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal8.jpg" class="card-img-top gallery-img" alt="Gallery Image 8">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal9.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal9.jpg" class="card-img-top gallery-img" alt="Gallery Image 9">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal9.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal9.jpg" class="card-img-top gallery-img" alt="Gallery Image 9">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal10.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal10.jpg" class="card-img-top gallery-img" alt="Gallery Image 10">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal10.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal10.jpg" class="card-img-top gallery-img" alt="Gallery Image 10">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal11.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal11.jpg" class="card-img-top gallery-img" alt="Gallery Image 11">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal11.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal11.jpg" class="card-img-top gallery-img" alt="Gallery Image 11">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal12.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal12.jpg" class="card-img-top gallery-img" alt="Gallery Image 12">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal12.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal12.jpg" class="card-img-top gallery-img" alt="Gallery Image 12">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal28.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal28.jpg" class="card-img-top gallery-img" alt="Gallery Image 13">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal28.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal28.jpg" class="card-img-top gallery-img" alt="Gallery Image 13">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal29.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal29.jpg" class="card-img-top gallery-img" alt="Gallery Image 14">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal29.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal29.jpg" class="card-img-top gallery-img" alt="Gallery Image 14">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal30.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal30.jpg" class="card-img-top gallery-img" alt="Gallery Image 15">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal30.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal30.jpg" class="card-img-top gallery-img" alt="Gallery Image 15">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal31.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal31.jpg" class="card-img-top gallery-img" alt="Gallery Image 16">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal31.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal31.jpg" class="card-img-top gallery-img" alt="Gallery Image 16">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal27.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal27.jpg" class="card-img-top gallery-img" alt="Gallery Image 17">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal27.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal27.jpg" class="card-img-top gallery-img" alt="Gallery Image 17">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gal26.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gal26.jpg" class="card-img-top gallery-img" alt="Gallery Image 18">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gal26.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gal26.jpg" class="card-img-top gallery-img" alt="Gallery Image 18">
+              </a>
             </div>
-            <!--
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" class="card-img-top gallery-img" alt="Gallery Image 19">
-                </a>
-              </div>
+          </div>
+          <!--
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Soukhya_homes_gallery (16).jpg" class="card-img-top gallery-img" alt="Gallery Image 19">
+              </a>
             </div>
-            -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" class="card-img-top gallery-img" alt="Gallery Image 20">
-                </a>
-              </div>
+          </div>
+          -->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Soukhya_homes_gallery (9).jpg" class="card-img-top gallery-img" alt="Gallery Image 20">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/cele_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/cele_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 21">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/cele_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/cele_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 21">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Meet_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Meet_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 22">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Meet_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Meet_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 22">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/flower_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/flower_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 23">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/flower_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/flower_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 23">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Pinkk_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Pinkk_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 24">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Pinkk_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Pinkk_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 24">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 9.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 9.jpg" class="card-img-top gallery-img" alt="Gallery Image 25">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 9.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 9.jpg" class="card-img-top gallery-img" alt="Gallery Image 25">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 13.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 13.jpg" class="card-img-top gallery-img" alt="Gallery Image 26">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 13.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 13.jpg" class="card-img-top gallery-img" alt="Gallery Image 26">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 14.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 14.jpg" class="card-img-top gallery-img" alt="Gallery Image 27">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 14.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 14.jpg" class="card-img-top gallery-img" alt="Gallery Image 27">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 15.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 15.jpg" class="card-img-top gallery-img" alt="Gallery Image 28">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 15.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 15.jpg" class="card-img-top gallery-img" alt="Gallery Image 28">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 16.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 16.jpg" class="card-img-top gallery-img" alt="Gallery Image 29">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 16.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 16.jpg" class="card-img-top gallery-img" alt="Gallery Image 29">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 17.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 17.jpg" class="card-img-top gallery-img" alt="Gallery Image 30">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 17.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 17.jpg" class="card-img-top gallery-img" alt="Gallery Image 30">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 21.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 21.jpg" class="card-img-top gallery-img" alt="Gallery Image 31">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 21.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 21.jpg" class="card-img-top gallery-img" alt="Gallery Image 31">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/gallery 5.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/gallery 5.jpg" class="card-img-top gallery-img" alt="Gallery Image 32">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/gallery 5.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/gallery 5.jpg" class="card-img-top gallery-img" alt="Gallery Image 32">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/sdown.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/sdown.jpg" class="card-img-top gallery-img" alt="Gallery Image 33">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/sdown.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/sdown.jpg" class="card-img-top gallery-img" alt="Gallery Image 33">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/hut_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/hut_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 34">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/hut_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/hut_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 34">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Pink_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Pink_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 35">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Pink_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Pink_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 35">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/portfolio/Play_area_SH.jpg" data-lightbox="gallery">
-                  <img src="/assets/img/portfolio/Play_area_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 36">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/portfolio/Play_area_SH.jpg" data-lightbox="gallery">
+                <img src="/assets/img/portfolio/Play_area_SH.jpg" class="card-img-top gallery-img" alt="Gallery Image 36">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/Soukhya_homes_gallery (12).jpg" data-lightbox="gallery">
-                  <img src="/assets/img/Soukhya_homes_gallery (12).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (12)">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/Soukhya_homes_gallery (12).jpg" data-lightbox="gallery">
+                <img src="/assets/img/Soukhya_homes_gallery (12).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (12)">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/Soukhya_homes_gallery (13).jpg" data-lightbox="gallery">
-                  <img src="/assets/img/Soukhya_homes_gallery (13).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (13)">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/Soukhya_homes_gallery (13).jpg" data-lightbox="gallery">
+                <img src="/assets/img/Soukhya_homes_gallery (13).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (13)">
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
-              <div class="gallery-card card shadow-sm w-100 border-0">
-                <a href="/assets/img/Soukhya_homes_gallery (14).jpg" data-lightbox="gallery">
-                  <img src="/assets/img/Soukhya_homes_gallery (14).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (14)">
-                </a>
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+            <div class="gallery-card card shadow-sm w-100 border-0">
+              <a href="/assets/img/Soukhya_homes_gallery (14).jpg" data-lightbox="gallery">
+                <img src="/assets/img/Soukhya_homes_gallery (14).jpg" class="card-img-top gallery-img" alt="Gallery Image Soukhya_homes_gallery (14)">
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <style>
-      .gallery-hero { min-height: 250px; }
-      .gallery-card {
-        border-radius: 16px;
-        overflow: hidden;
-        transition: transform 0.2s, box-shadow 0.2s;
-        background: #fff;
-      }
-      .gallery-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-      }
-      .gallery-img {
-        height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        width: 100%;
-      }
-      @media (max-width: 767px) {
-        .gallery-hero { min-height: 120px; }
-        .gallery-img { height: 140px; }
-      }
-    </style>
-    <link href="/assets/css/lightbox.css" rel="stylesheet">
-    <script src="/assets/js/lightbox.min.js"></script>
-    {% include footer.html %}
-    {% include scripts.html %}
+    </div>
+  </section>
+  <style>
+    .gallery-hero { min-height: 250px; }
+    .gallery-card {
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #fff;
+    }
+    .gallery-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    .gallery-img {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      .gallery-hero { min-height: 120px; }
+      .gallery-img { height: 140px; }
+    }
+  </style>
+  <link href="/assets/css/lightbox.css" rel="stylesheet">
+  <script src="/assets/js/lightbox.min.js"></script>
+  {% include footer.html %}
+  {% include scripts.html %}
 </body>
 </html>
