@@ -22,7 +22,7 @@
 <br>
 <br>
   <!-- ============= About section Start ============= -->
-  <section id="about-us" class="py-5" style="background:#f7f1e3;">
+  <section id="about-us" class="py-5 animate-about-fade-in" style="background:#f7f1e3;">
     <div class="container">
       <div class="row g-5 align-items-center mb-5 flex-md-row flex-column-reverse">
         <div class="col-md-6 flex flex-col items-center justify-center text-center">
@@ -59,7 +59,7 @@ nature and one with nature at Soukhya Villas.</p>
   <!-- ============= About section End ============= -->
 
   <!-- ============= Surroundings section Start ============= -->
-  <section id="surroundings-section" class="py-5" style="background:#e0f7fa;">
+  <section id="surroundings-section" class="py-5 animate-surroundings-pop" style="background:#46f0c5;">
     <div class="container">
       <div class="row mb-5">
         <div class="col-12">
@@ -437,6 +437,21 @@ nature and one with nature at Soukhya Villas.</p>
       }
       .animate-fade-in-up.delay-150 {
         animation-delay: 0.15s;
+      }
+      @keyframes aboutFadeIn {
+        0% { opacity: 0; transform: translateY(40px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-about-fade-in {
+        animation: aboutFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+      }
+      @keyframes surroundingsPop {
+        0% { opacity: 0; transform: scale(0.85) translateY(40px); }
+        60% { opacity: 1; transform: scale(1.05) translateY(-8px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .animate-surroundings-pop {
+        animation: surroundingsPop 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
       }
       .about-feature-oval {
         background: #fff;
