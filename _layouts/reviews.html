@@ -211,11 +211,21 @@ At Soukhya Homes, we don’t just live—we share, we cherish, and we thrive. It
         box-shadow: 0 2px 12px rgba(0,150,136,0.07);
         padding: 2rem 1.5rem !important;
         max-height: 320px;
+        min-height: 320px;
+        min-width: 320px;
+        max-width: 370px;
         overflow: hidden;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
       }
       .review-card.expanded {
         max-height: none;
+        min-height: 320px;
+        min-width: 320px;
+        max-width: 370px;
         overflow: visible;
       }
       .review-card .stars-and-meta {
@@ -275,10 +285,24 @@ At Soukhya Homes, we don’t just live—we share, we cherish, and we thrive. It
       }
       .row.g-4.justify-content-center > [class*='col-'] {
         margin-bottom: 2.2rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
       }
       @media (max-width: 767px) {
         .reviews-hero { min-height: 120px; }
         .section-title { font-size: 1.5rem; }
+        .review-card {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 260px;
+          max-height: 260px;
+        }
+        .review-card.expanded {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 260px;
+        }
       }
       .review-card p {
         text-align: justify;
