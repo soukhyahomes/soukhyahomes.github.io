@@ -9,7 +9,7 @@
 <nav class="navbar" style="position:relative;overflow:hidden;">
   <!-- Video background for navbar -->
   <div id="nav-video-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;">
-    <video id="navbar-bg-video" src="assets/img/green.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+    <video id="navbar-bg-video" src="assets/img/green.mp4" autoplay loop playsinline style="width:100%;height:100%;object-fit:cover;"></video>
     <!-- White fade overlay for readability -->
     <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0.6) 100%);pointer-events:none;"></div>
   </div>
@@ -46,6 +46,19 @@
       navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('hidden');
       });
+    }
+    // Set navbar video volume to 30% and try to play audio after user interaction
+    var navVideo = document.getElementById('navbar-bg-video');
+    if(navVideo) {
+      navVideo.volume = 0.3;
+      // Try to play after first user interaction for browsers that block autoplay with sound
+      var playNavVideo = function() {
+        navVideo.play();
+        document.removeEventListener('click', playNavVideo);
+        document.removeEventListener('touchstart', playNavVideo);
+      };
+      document.addEventListener('click', playNavVideo);
+      document.addEventListener('touchstart', playNavVideo);
     }
   });
 </script>
