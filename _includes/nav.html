@@ -7,9 +7,16 @@
  Maintenance Marquee End -->
 
 <nav class="navbar" style="position:relative;overflow:hidden;">
-  <!-- Lottie background animation: background-alemar-1xVqVoJyhM -->
+  <!-- DotLottie background animation placeholder -->
   <div id="nav-lottie-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;">
-    <lottie-player src="https://lottie.host/1b1e2b7b-7e7a-4e2e-8e2e-2e2e2e2e2e2e/1xVqVoJyhM.json" background="transparent" speed="1" style="width:100%;height:100%;" loop autoplay></lottie-player>
+    <dotlottie-player
+      src="PUT_YOUR_DOTLOTTIE_FILE_URL_HERE"
+      background="transparent"
+      speed="1"
+      style="width:100%;height:100%;"
+      loop
+      autoplay
+    ></dotlottie-player>
   </div>
   <div class="container" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;position:relative;z-index:1;">
     <div class="navbar-header" style="display:flex;align-items:center;">
@@ -35,7 +42,7 @@
     <!-- Enquire Us & Brochure Right Extreme -->
   </div>
 </nav>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <script>
   // Mobile nav toggle
   document.addEventListener('DOMContentLoaded', function() {
