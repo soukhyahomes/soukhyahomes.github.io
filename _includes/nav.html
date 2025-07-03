@@ -7,16 +7,11 @@
  Maintenance Marquee End -->
 
 <nav class="navbar" style="position:relative;overflow:hidden;">
-  <!-- DotLottie background animation placeholder -->
-  <div id="nav-lottie-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;">
-    <dotlottie-player
-      src="PUT_YOUR_DOTLOTTIE_FILE_URL_HERE"
-      background="transparent"
-      speed="1"
-      style="width:100%;height:100%;"
-      loop
-      autoplay
-    ></dotlottie-player>
+  <!-- Video background for navbar -->
+  <div id="nav-video-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;">
+    <video id="navbar-bg-video" src="assets/img/green.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+    <!-- White fade overlay for readability -->
+    <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0.6) 100%);pointer-events:none;"></div>
   </div>
   <div class="container" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;position:relative;z-index:1;">
     <div class="navbar-header" style="display:flex;align-items:center;">
@@ -42,7 +37,6 @@
     <!-- Enquire Us & Brochure Right Extreme -->
   </div>
 </nav>
-<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <script>
   // Mobile nav toggle
   document.addEventListener('DOMContentLoaded', function() {
