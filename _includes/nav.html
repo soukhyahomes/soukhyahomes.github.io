@@ -56,11 +56,24 @@
     #nav-toggle { display: none; }
   }
   .logo-animate img {
-    transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+    transition: transform 0.35s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
   }
   .logo-animate:hover img {
-    transform: scale(1.13) rotate(-6deg) translateY(-10px);
+    transform: scale(1.13) rotate(6deg) translateY(10px);
     box-shadow: 0 12px 32px 0 rgba(0,150,136,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
     z-index: 10;
+  }
+  #nav-menu li a {
+    transition: transform 0.25s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.25s;
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+  }
+  #nav-menu li a:hover, #nav-menu li a:focus {
+    transform: scale(1.15) translateY(-7px) rotate(-3deg);
+    box-shadow: 0 8px 24px 0 rgba(0,150,136,0.13), 0 1px 4px 0 rgba(0,0,0,0.08);
+    background: #f0fdfa;
+    color: #0d9488 !important;
+    z-index: 2;
   }
 </style>
