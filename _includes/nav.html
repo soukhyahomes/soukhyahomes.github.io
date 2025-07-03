@@ -9,7 +9,7 @@
 <nav class="navbar">
   <div class="container" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;">
     <div class="navbar-header" style="display:flex;align-items:center;">
-      <a href="/index.html" class="navbar-brand">
+      <a href="/index.html" class="navbar-brand logo-animate">
         <img src="/assets/img/logo.png" style="max-height:80px;max-width:220px;width:auto;height:auto;object-fit:contain;display:block;">
       </a>
     </div>
@@ -54,5 +54,13 @@
   @media (min-width: 769px) {
     #nav-menu { display: flex !important; position: static; background: transparent; box-shadow: none; border-radius: 0; }
     #nav-toggle { display: none; }
+  }
+  .logo-animate img {
+    transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+  }
+  .logo-animate:hover img {
+    transform: scale(1.13) rotate(-6deg) translateY(-10px);
+    box-shadow: 0 12px 32px 0 rgba(0,150,136,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+    z-index: 10;
   }
 </style>
