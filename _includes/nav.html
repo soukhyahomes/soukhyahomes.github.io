@@ -6,7 +6,7 @@
 </div>
  Maintenance Marquee End -->
 
-<nav class="navbar" style="position:relative;overflow:hidden;">
+<nav class="navbar" style="position:fixed;top:0;left:0;width:100%;z-index:1000;overflow:hidden;">
   <!-- Video background for navbar -->
   <div id="nav-video-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;">
     <video id="navbar-bg-video" src="assets/img/green.mp4" autoplay loop playsinline style="width:100%;height:100%;object-fit:cover;"></video>
@@ -63,6 +63,8 @@
   });
 </script>
 <style>
+  html, body { overscroll-behavior-y: none; }
+  body { padding-top: 120px !important; }
   @media (max-width: 768px) {
     .navbar .container { flex-direction: column; align-items: stretch; }
     #nav-menu { position: absolute; left: 0; right: 0; top: 60px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 0 0 1rem 1rem; }
@@ -96,6 +98,7 @@
   .navbar {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    height: 120px;
   }
   .navbar + section,
   .navbar + .hero-section,
