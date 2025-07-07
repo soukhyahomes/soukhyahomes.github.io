@@ -423,13 +423,14 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
                   {% endif %}
                   <div class="relative z-20 mt-8" style="text-align:justify;">
                     <h3 class="text-3xl font-bold mb-4 text-teal-700">Between Two Horizons</h3>
-                    <div class="text-gray-700 text-lg whitespace-pre-line readmore-content" style="max-height: 320px; overflow: hidden; position: relative;">
+                    <div class="text-gray-700 text-lg whitespace-pre-line readmore-content" style="max-height: 320px; overflow: hidden; position: relative; transition: max-height 0.5s cubic-bezier(.4,0,.2,1); line-height: 1.8;">
+
+                      
  <p>My apartment—A109, Soukhya Homes—is more than just a place to live. It rests gently between two living horizons. On one side, the world stirs awake in golden whispers; on the other, it settles into the quiet hush of twilight.</p>
 
   <p>Life here feels like leafing through the pages of a sacred book—each day penned anew by nature itself, and I, both reader and witness to its unfolding poetry.</p>
 
-  <h2>The East: A Liturgy of Light</h2>
-
+  <h2 class="text-2xl font-semibold mt-6 mb-2 text-teal-600">The East: A Liturgy of Light</h2>
   <p>The front of my apartment faces east. Morning doesn’t arrive with urgency—it descends as a blessing. The sun rises behind slender bamboo and tall trees, their branches filtering the light with sacred discretion.</p>
 
   <p>This is not light that dazzles; it blesses. It slips softly across the floor, brushes the walls, kisses the skin with quiet reverence. As if the trees themselves know how to hold light, releasing it slowly—like golden ink from an unseen hand, scripting verses the heart alone can read.</p>
@@ -444,8 +445,7 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
 
   <p>I always do. Because here, nothing hurries. Everything moves to the slow rhythm of grace. This eastern face of my home is a poem in motion—written not in ink, but in scent, silence, and slanted light.</p>
 
-  <h2>The West: The Wisdom of Stillness</h2>
-
+  <h2 class="text-2xl font-semibold mt-6 mb-2 text-teal-600">The West: The Wisdom of Stillness</h2>
   <p>And then—there is the west.</p>
 
   <p>If the east is poetry, then the west is prose—grounded, contemplative, deeply wise. From the rear corridor, I look out onto fields that stretch wide and quiet, their silence broken only by wind and the occasional call of a bird.</p>
@@ -464,8 +464,7 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
 
   <p>Sometimes I linger for long minutes—doing nothing, needing nothing—just allowing the hush of evening to settle into me, as if I too were rooted in this land.</p>
 
-  <h2>Between</h2>
-
+  <h2 class="text-2xl font-semibold mt-6 mb-2 text-teal-600">Between</h2>
   <p>This home—my home—is more than shelter. It breathes with me. It listens. It teaches the sacred art of being still.</p>
 
   <p>And it offers two gifts: the east, with its promise of beginnings, and the west, with its gentle assurance of return.</p>
@@ -543,6 +542,22 @@ To us residents, the pond is far more than a scenic corner of our campus. It is 
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       }
     }
+    .readmore-content p { margin-bottom: 1.2em; }
+    .readmore-content.expanded { max-height: 2000px !important; overflow: visible; }
   </style>
+  <script>
+function toggleReadMore(btn) {
+  var content = btn.previousElementSibling;
+  if (!content.classList.contains('expanded')) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+    content.classList.add('expanded');
+    btn.textContent = 'Read Less';
+  } else {
+    content.style.maxHeight = '320px';
+    content.classList.remove('expanded');
+    btn.textContent = 'Read More';
+  }
+}
+  </script>
 </body>
 </html>
