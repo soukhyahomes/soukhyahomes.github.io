@@ -6,7 +6,7 @@
 </div>
  Maintenance Marquee End -->
 
-<nav class="navbar" style="position:fixed;top:0;left:0;width:100%;z-index:1000;overflow:hidden;">
+<nav class="navbar" style="position:fixed;top:0;left:0;width:100%;z-index:1000;overflow:hidden; height:80px;">
   <!-- Video background for navbar -->
   <div id="nav-video-bg" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;">
   <video id="navbar-bg-video" src="assets/img/green.mp4" autoplay loop playsinline muted style="width:100%;height:100%;object-fit:cover;"></video>
@@ -14,11 +14,12 @@
     <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0.6) 100%);pointer-events:none;"></div>
   </div>
   <div class="container" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;position:relative;z-index:1;">
-    <div class="navbar-header" style="display:flex;align-items:center;">
-      <a href="/index.html" class="navbar-brand">
+  <div class="navbar-header" style="display:flex;align-items:center; padding-left:120px; padding-right:16px; flex:0 0 auto;">
+      <a href="/index.html" class="navbar-brand" style="display:block;">
         <img src="/assets/img/logo.png" style="max-height:80px;max-width:220px;width:auto;height:auto;object-fit:contain;display:block;">
       </a>
     </div>
+    <div style="flex:1 1 auto; display:flex; justify-content:center; align-items:center;">
     <!-- Hamburger for mobile -->
     <button id="nav-toggle" class="block md:hidden px-3 py-2 border rounded text-teal-700 border-teal-700 focus:outline-none" style="margin-left:24px;" aria-label="Toggle navigation">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -98,7 +99,7 @@
   .navbar {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-    height: 120px;
+    height: 80px;
   }
   .navbar + section,
   .navbar + .hero-section,
