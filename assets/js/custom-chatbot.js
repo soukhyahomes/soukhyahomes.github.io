@@ -97,11 +97,10 @@ function showChatbot() {
 // Floating button to open chatbot
 function addChatbotButton() {
   if (document.getElementById('chatbot-launch-btn')) return;
-  if (document.getElementById('whatsapp-launch-btn')) return;
-  // Chatbot button
+  // Chatbot button only
   const btn = document.createElement('button');
   btn.id = 'chatbot-launch-btn';
-  btn.innerText = 'Chat';
+  btn.innerText = 'Chatbot';
   btn.style.position = 'fixed';
   btn.style.bottom = '32px';
   btn.style.left = '32px';
@@ -111,41 +110,20 @@ function addChatbotButton() {
   btn.style.borderRadius = '50%';
   btn.style.width = '56px';
   btn.style.height = '56px';
-  btn.style.fontSize = '1.3em';
+  btn.style.fontSize = '0.85em';
   btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.18)';
   btn.style.zIndex = '9998';
   btn.style.cursor = 'pointer';
+  btn.style.display = 'flex';
+  btn.style.alignItems = 'center';
+  btn.style.justifyContent = 'center';
+  btn.style.textAlign = 'center';
+  btn.style.padding = '0';
   btn.onclick = function() {
     btn.remove();
-    document.getElementById('whatsapp-launch-btn').remove();
     showChatbot();
   };
   document.body.appendChild(btn);
-
-  // WhatsApp button
-  const waBtn = document.createElement('a');
-  waBtn.id = 'whatsapp-launch-btn';
-  waBtn.href = 'https://wa.me/919677227627';
-  waBtn.target = '_blank';
-  waBtn.rel = 'noopener';
-  waBtn.innerHTML = '<img src="assets/img/whatsapp_logo_icon_186881.png" alt="WhatsApp" style="width:32px;height:32px;vertical-align:middle;">';
-  waBtn.style.position = 'fixed';
-  waBtn.style.bottom = '32px';
-  waBtn.style.left = '96px';
-  waBtn.style.background = '#25D366';
-  waBtn.style.color = '#fff';
-  waBtn.style.border = 'none';
-  waBtn.style.borderRadius = '50%';
-  waBtn.style.width = '56px';
-  waBtn.style.height = '56px';
-  waBtn.style.display = 'flex';
-  waBtn.style.alignItems = 'center';
-  waBtn.style.justifyContent = 'center';
-  waBtn.style.fontSize = '1.3em';
-  waBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.18)';
-  waBtn.style.zIndex = '9998';
-  waBtn.style.cursor = 'pointer';
-  document.body.appendChild(waBtn);
 }
 
 window.addEventListener('DOMContentLoaded', addChatbotButton);
