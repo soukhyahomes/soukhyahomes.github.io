@@ -56,7 +56,7 @@ function getChatbotAnswer(userInput) {
 
   // Pricing-related detection (always return the official PDF link)
   const pricingRx = /\b(tariff|rate|price|pricing|cost|deposit|monthly|terms|tariff|fees|charges)\b/i;
-  const pricingLink = "/assets/img/SOUKHYA - terms, tariff & facilities - 1st Jan 2024.pdf";
+  const pricingLink = "/assets/img/SOUKHYA%20-%20terms%2C%20tariff%20%26%20facilities%20-%20JAN%202026.pdf";
   if(pricingRx.test(text)){
     // if we can produce a short answer from QA, include it as a quick summary
     const qaSummary = findBestQA(text);
