@@ -54,6 +54,21 @@ body:after {
   border-radius: 4px;
 }
 
+/* When the outer wrapper is removed, ensure .lb-container retains the same layout/styling */
+.lb-container {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .lb-outerContainer:after {
   content: "";
   display: table;
@@ -207,4 +222,10 @@ body:after {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* Override: Hide floating lightbox nav anchors to avoid overlaying page banners */
+.lb-nav, .lb-nav a, .lb-prev, .lb-next {
+  display: none !important;
+  pointer-events: none !important;
 }
