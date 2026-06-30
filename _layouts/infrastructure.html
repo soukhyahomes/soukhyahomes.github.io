@@ -213,13 +213,13 @@
   </section>
 
   <!-- Home Tour Video Modal -->
-  <div id="home-tour-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden" style="display: none;">
-    <div class="relative w-full max-w-4xl mx-4">
-      <button id="close-home-tour" class="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300 transition z-60" aria-label="Close video">
-        <i class="fas fa-times"></i>
+  <div id="home-tour-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80" style="display: none; min-height: 100vh;">
+    <div class="relative mx-4" style="width: 80vw; max-width: 80vw; max-height: 80vh;">
+      <button id="close-home-tour" class="absolute top-4 right-4 text-black text-3xl hover:text-gray-800 transition" aria-label="Close video" style="width:44px;height:44px;border-radius:9999px;background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;z-index:1002;box-shadow:0 4px 20px rgba(0,0,0,0.22);border:1px solid rgba(0,0,0,0.08);font-weight:700;">
+        &times;
       </button>
       <div class="relative w-full bg-black rounded-lg overflow-hidden shadow-2xl" style="padding-bottom: 56.25%;">
-        <video id="home-tour-video" class="absolute top-0 left-0 w-full h-full" controls>
+        <video id="home-tour-video" class="absolute top-0 left-0 w-full h-full" controls autoplay playsinline preload="auto">
           <source src="/assets/img/Soukhya Homes_Home Tour_villa.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -305,10 +305,21 @@
       if (trigger) {
         trigger.addEventListener('click', function() {
           modal.style.display = 'flex';
+          modal.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
           if (video) {
             video.currentTime = 0;
-            video.play();
+            video.volume = 1;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {
+                // Chrome may block autoplay with sound, but user click should allow it.
+                video.muted = false;
+                video.play().catch(() => {
+                  // Fallback: show popup and let user press play manually.
+                });
+              });
+            }
           }
         });
       }
@@ -316,6 +327,7 @@
       if (closeBtn) {
         closeBtn.addEventListener('click', function() {
           modal.style.display = 'none';
+          modal.classList.add('hidden');
           if (video) {
             video.pause();
           }
@@ -327,6 +339,7 @@
         modal.addEventListener('click', function(e) {
           if (e.target === modal) {
             modal.style.display = 'none';
+            modal.classList.add('hidden');
             if (video) {
               video.pause();
             }
@@ -338,6 +351,7 @@
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
           modal.style.display = 'none';
+          modal.classList.add('hidden');
           if (video) {
             video.pause();
           }
