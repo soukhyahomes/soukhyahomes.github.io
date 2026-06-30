@@ -93,6 +93,17 @@
             <p class="text-muted">Private balcony with lush green views for peace and relaxation.</p>
           </div>
         </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="infra-card card h-100 text-center p-4 shadow-sm cursor-pointer hover:shadow-lg transition" id="home-tour-trigger">
+            <div class="infra-img-circle mb-3" style="position: relative;">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-play" style="color: white; font-size: 1.8rem;"></i>
+              </div>
+            </div>
+            <h5 class="mb-2">Home Tour</h5>
+            <p class="text-muted">Let's take a tour of our beautiful villa—welcome home! ✨🏡.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -201,6 +212,21 @@
     </div>
   </section>
 
+  <!-- Home Tour Video Modal -->
+  <div id="home-tour-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden" style="display: none;">
+    <div class="relative w-full max-w-4xl mx-4">
+      <button id="close-home-tour" class="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300 transition z-60" aria-label="Close video">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="relative w-full bg-black rounded-lg overflow-hidden shadow-2xl" style="padding-bottom: 56.25%;">
+        <video id="home-tour-video" class="absolute top-0 left-0 w-full h-full" controls>
+          <source src="/assets/img/Soukhya Homes_Home Tour_villa.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
   <style>
     .infra-hero { min-height: 350px; }
     .infra-card, .facility-card {
@@ -268,5 +294,57 @@
   </style>
   {% include footer.html %}
   {% include scripts.html %}
+
+  <script>
+    (function() {
+      const modal = document.getElementById('home-tour-modal');
+      const trigger = document.getElementById('home-tour-trigger');
+      const closeBtn = document.getElementById('close-home-tour');
+      const video = document.getElementById('home-tour-video');
+
+      if (trigger) {
+        trigger.addEventListener('click', function() {
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+          if (video) {
+            video.currentTime = 0;
+            video.play();
+          }
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          modal.style.display = 'none';
+          if (video) {
+            video.pause();
+          }
+          document.body.style.overflow = 'auto';
+        });
+      }
+
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+            if (video) {
+              video.pause();
+            }
+            document.body.style.overflow = 'auto';
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
+          modal.style.display = 'none';
+          if (video) {
+            video.pause();
+          }
+          document.body.style.overflow = 'auto';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
